@@ -75,6 +75,7 @@
 			blue_line($('.menua').eq(0));
 			createVideo('player',o.videoID,false);
 			var _random = Math.round(Math.random()*4);
+			console.log(_random);
 			$('.break_wrapper .pg3 .person').eq(_random).show();
 		}else if(o.wrp.hasClass('rule')){
 			blue_line($('.menua').eq(3));
