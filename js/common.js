@@ -1,6 +1,11 @@
 ﻿$(document).ready(function(){
 	var webData ={};
 	webData.wrp=$('.wrapper');
+
+	// var _di = $('.'+webData.nowsg).find('.main1').attr('id');
+	// var _di2 = $('.'+webData.nowsg).find('.main2').attr('id');
+	// webData.pg_Parallax = new Parallax(document.getElementById(_di));
+	// webData.pg_b_Parallax = new Parallax(document.getElementById(_di2));
   
 })//ready end  
 
