@@ -74,7 +74,7 @@
 		if(o.wrp.hasClass('index')){
 			blue_line($('.menua').eq(0));
 			createVideo('player',o.videoID,false);
-			var _random = Math.round(Math.random()*5);
+			var _random = Math.round(Math.random()*4);
 			$('.break_wrapper .pg3 .person').eq(_random).show();
 		}else if(o.wrp.hasClass('rule')){
 			blue_line($('.menua').eq(3));
