@@ -17,47 +17,128 @@
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 <!---->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 <!--css-->
 <link rel="stylesheet" href="css/common.css"/>
 <!--js-->
-<!-- <script type="text/javascript" src="//connect.facebook.net/zh_TW/all.js"></script> -->
+<script type="text/javascript" src="//connect.facebook.net/zh_TW/all.js"></script>
+<script src="js/firwork.js?1467128985553"></script>
+<script src="js/parallax.js"></script>
 <script src="js/ga.js"></script>
 <script src="js/common.js"></script>
 </head>
 <body>
-	<div class="top_bar">
-		<div class="logo"></div>
-		<div class="menu">
-			<div class="menua"><a href="#" class="m1"></a></div>
-			<div class="menua"><a href="#" class="m2"></a></div>
-			<div class="menua"><a href="#" class="m3"></a></div>
-			<div class="menua"><a href="#" class="m4"></a></div>
-			<div class="menua"><a href="#" class="m5"></a></div>
-			<div class="menua"><a href="#" class="m6"></a></div>
+	<div class="break_loading"></div>
+	<div class="break_top_bar">
+		<div class="break_top_barin">
+			<div class="logo"></div>
+			<div class="menu">
+				<div class="menua"><a href="#" class="m1"></a></div>
+				<div class="menua"><a href="#" class="m2"></a></div>
+				<div class="menua"><a href="#" class="m3"></a></div>
+				<div class="menua"><a href="#" class="m4"></a></div>
+				<div class="menua"><a href="#" class="m5"></a></div>
+				<div class="menua"><a href="#" class="m6"></a></div>
+			</div>
+			<span class="blue_line"></span>
 		</div>
 		<div class="sub">
-			<div class="suba"><a href="#" class="suba1" target="blank"></a></div>
-			<div class="suba"><a href="#" class="suba2" target="blank"></a></div>
+			<div class="subin">
+				<div class="suba"><a href="#" class="suba1" target="blank"></a></div>
+				<div class="suba"><a href="#" class="suba2" target="blank"></a></div>	
+			</div>
 		</div>
 	</div>
-	<div class="wrapper">
-		<!-- <div id="main5" class="main1" data-friction-x="0.00" data-friction-y="0">
-          <div class="title layer" data-depth="0.00"></div>
-          <div class="go_btn layer" data-depth="0.00"><canvas id="pg3gobtn" width="235" height="76"></canvas></div>
-          <div class="peng1 layer" data-depth="0.00"><canvas id="sg3Pengmain1" width="500" height="467"></canvas></div>
-          <div class="earth1 layer" data-depth="0.00"></div>
-          <div class="earth2 layer" data-depth="0.2"></div>
-          <div class="earth3 layer" data-depth="0.05"></div>
-          <div class="earth4 layer" data-depth="0.01"></div>
-        </div> -->
+	<div class="break_wrapper">
         <div class="page_all">
-        	<div class="page">
-        		
+        	<div class="page pg1" id="break_page_pg1" data-friction-y="0">
+        		<div class="title layer" data-depth="0.00"></div>
+        		<div class="btn">
+        			<a href="#" class="btn1"></a>
+        			<a href="#" class="btn2"></a>
+        			<div class="sroll_btn"><span></span></div>
+        		</div>
+        		<div class="kv layer" data-depth="0.2"></div>
+        		<div class="bg">
+        			<div class="item1 layer" data-depth="0.03"></div>
+        			<div class="item2 layer" data-depth="0.02"></div>
+        			<div class="item3 layer" data-depth="0.05"></div>
+        			<div class="item4 layer" data-depth="0.01"></div>
+        			<canvas id="canvas" width="1920" height="1080"></canvas>
+        		</div>
         	</div>
-        	<div class="page"></div>
-        	<div class="page"></div>
-        	<div class="page"></div>
-        	<div class="page"></div>
+        	<div class="page pg2">
+        		<div class="fbshare"></div>
+        		<div class="cover videoctrl">
+        			<div class="play_btn"></div>
+        		</div>
+        		<div class="video">
+        			<div id="player"></div>
+        		</div>
+        	</div>
+        	<div class="page pg3">
+        		<div class="person pe1">
+        			<div class="main">
+        				<div class="t">
+        					<span>陳傑</span>2016里約奧運台灣田徑代表
+        				</div>
+        				<div class="w">
+        					從倫敦奧運跨到里約奧運，台灣體壇健將陳傑，今年將再度叩關奧運殿堂，站上四百公尺跨欄競賽的跑道。對他這樣的運動選手來說，別人是一年四季，他是四年一季。這段時間裡，他日以繼夜的訓練，除了秒數的進步...
+        				</div>
+        				<div class="btn"><a href="#"></a></div>
+        			</div>
+        		</div>
+        		<div class="person pe2">
+        			<div class="main">
+        				<div class="t">
+        					<span>李智凱</span>2016里約奧運台灣體操代表
+        				</div>
+        				<div class="w">
+        					每次完成比賽，我都覺得又更突破了自己一點，這是支持我一直走下去的動力。」這個只有20歲、神情略顯害羞的大男孩，是今年代表台灣前往里約奧運的體操小將–李智凱。這個名字你可能有些陌生，但若說《翻滾吧！男孩》，應該就有印象。當年紅遍台灣的紀錄片...
+        				</div>
+        				<div class="btn"><a href="#"></a></div>
+        			</div>
+        		</div>
+        		<div class="person pe3">
+        			<div class="main">
+        				<div class="t">
+        					<span>高浩文</span>2016里約奧運台灣射箭代表
+        				</div>
+        				<div class="w">
+        					來自花蓮秀林鄉的射箭國手高浩文，體內流著太魯閣族的獵人基因，從小看族裡長輩用傳統弓箭狩獵而產生興趣，國中開始加入射箭隊，初試啼聲就獲教練肯定。2009年參加波蘭世界室內射箭錦標賽技驚全場，越級射下男子團體組銀牌，創台灣箭壇最年輕奪牌紀錄...
+        				</div>
+        				<div class="btn"><a href="#"></a></div>
+        			</div>
+        		</div>
+        		<div class="person pe4">
+        			<div class="main">
+        				<div class="t">
+        					<span>許淑淨</span>2016里約奧運台灣舉重代表
+        				</div>
+        				<div class="w">
+        					許淑淨，2012年在倫敦奧運女子舉重項目奪得銀牌，一舉成名。此後她像是打通任督二脈般，在2014年仁川亞運和2015世界舉重錦標賽連連奪金，更締造新的世界紀錄！很難想像這個身型嬌小的女孩，竟能舉起超過100公斤的驚人重量。成績輝煌的許淑淨...
+        				</div>
+        				<div class="btn"><a href="#"></a></div>
+        			</div>
+        		</div>
+        		<div class="person pe5">
+        			<div class="main">
+        				<div class="t">
+        					<span>譚雅婷</span>2016里約奧運台灣射箭代表
+        				</div>
+        				<div class="w">
+        					不斷射破全國紀錄，率先入選今年奧運女子射箭項目資格的譚雅婷，近日又帶領著中華女子射箭隊，從土耳其射箭世界盃傳回捷報，順利取得額滿3張門票前進里約奧運。從小就喜歡射箭的譚雅婷，有著好強不服輸的個性，覺得要做就做到最好，才對得起自己...
+        				</div>
+        				<div class="btn"><a href="#"></a></div>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="page pg4">
+        		<div class="main">
+        			<div class="btn"><a href="#"></a></div>
+        		</div>
+        	</div>
         </div>
 	</div>
 </body>
