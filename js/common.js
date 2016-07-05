@@ -47,6 +47,13 @@
 	}
 
 	//Addlistener
+	$(window).on('touchmove',function(){
+		if(o.mobile){
+			if($('.break_top_bar').hasClass('on')){
+				$('.break_top_bar').css('height',$(window).height());
+			}
+		}
+	});
 	$('.m_icon').click(function(){
 		var _th = $(this).parent().parent();
 		if(_th.hasClass('on')){
@@ -127,17 +134,17 @@
 	//Event
 	function showmenu(_t){
 		if(_t){
-			$('.break_top_bar').css('height',$(window).height());
-			o.menutimeout = setTimeout(function(){
-				clearTimeout(o.menutimeout);
-				$('.break_top_bar').addClass('on');
-			},500);
+			$('.break_top_bar').css('height',$(window).height()).addClass('on');
+			// o.menutimeout = setTimeout(function(){
+			// 	clearTimeout(o.menutimeout);
+			// 	$('.break_top_bar')
+			// },500);
 		}else{
-			$('.break_top_bar').attr('style','');
-			o.menutimeout = setTimeout(function(){
-				clearTimeout(o.menutimeout);
-				$('.break_top_bar').removeClass('on');
-			},500);
+			$('.break_top_bar').attr('style','').removeClass('on');
+			// o.menutimeout = setTimeout(function(){
+			// 	clearTimeout(o.menutimeout);
+			// 	$('.break_top_bar').removeClass('on');
+			// },500);
 		}
 	}
 	function menumouseOut(){
