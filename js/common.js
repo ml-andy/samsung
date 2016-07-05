@@ -175,8 +175,8 @@
 			if(Math.abs(_x)<=o.touchvalueX) return;
 
 			var nownum =$('.person').attr('class').replace('person pe','').replace(' on','')*1;
-			if(_x>0) nownum = nownum*1 + 1;
-			else nownum = nownum*1 - 1;
+			if(_x>0) nownum = nownum*1 - 1;
+			else nownum = nownum*1 + 1;
 			if(nownum<1){nownum=5;}
 			else if(nownum>5){nownum=1;}
 			window.location.href = 'hero'+nownum+'.html';
