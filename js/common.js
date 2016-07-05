@@ -4,7 +4,7 @@
 	var o = {
 		wrp: $('.break_wrapper'),
 		touchvalueY: 25,
-		touchvalueX: 50,
+		touchvalueX: 100,
 		blue_line_speed: 100,
 		videoID: 'bRhpkp1_qEI',
 		videolink: 'https://www.youtube.com/watch?v=bRhpkp1_qEI',
