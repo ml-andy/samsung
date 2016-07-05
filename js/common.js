@@ -136,13 +136,13 @@
 					$('.hero_box .person').eq(i).find('.w').mCustomScrollbar({scrollInertia:300,scrollEasing:'linear'});
 				}
 			}else{
-				$(window).bind('touchstart',function(e){
+				$('.hero_box').bind('touchstart',function(e){
 					e = e.originalEvent.touches[0];
+					$('.hero_box').bind('touchmove',herotouchmove);
 					o.heromouseX = e.pageX;
 					o.heromouseY = e.pageY;
-					$('.hero_box').bind('touchmove',herotouchmove);
 				});
-				$(window).bind('touchend',function(e){
+				$('.hero_box').bind('touchend',function(e){
 					$('.hero_box').unbind('touchmove',herotouchmove);
 					checkHero();
 				});
