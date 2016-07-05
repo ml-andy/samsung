@@ -1237,6 +1237,7 @@
 		&.on{
 			overflow-y: scroll;
 			-webkit-overflow-scrolling: touch;
+			padding-bottom: 100px;
 			.break_top_barin .m_icon{
 				&:after{
 					opacity: 0;

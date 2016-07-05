@@ -50,7 +50,7 @@
 	$(window).on('touchmove',function(){
 		if(o.mobile){
 			if($('.break_top_bar').hasClass('on')){
-				$('.break_top_bar').css('height',$(window).height());
+				$('.break_top_bar').css('height',$(window).height()+100);
 			}
 		}
 	});
