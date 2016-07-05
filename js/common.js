@@ -65,6 +65,12 @@
 	}
 
 	//Addlistener
+	$('.chatbtn').click(function(){
+		window.open("http://s.jiathis.com/qrcode.php?url="+  encodeURIComponent(window.location.href) +"　",'_blank', "toolbar=yes, scrollbars=yes, resizable=yes, top=100, left=500, width=600, height=400");
+	});
+	$('.linebtn').click(function(){
+		window.open("//line.me/R/msg/text/?"+o.sharetitle+"，"+o.sharedes+ window.location.href +"　",'_blank', "toolbar=yes, scrollbars=yes, resizable=yes, top=100, left=500, width=600, height=400");
+	});
 	$(window).on('touchmove',function(e){
 		if(o.mobile){
 			if($('.break_top_bar').hasClass('on')){
