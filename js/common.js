@@ -269,16 +269,16 @@
 	}
 	function blue_line(_o){
 		if(o.mobile){
-			var _top = _o.offset().top - $('.break_top_bar').offset().top + $('.menua').height();
+			var _top = _o.offset().top - $('.break_top_bar').offset().top + _o.height()*0.75;
 			if(o.blue_line==_top){return}
 			o.blue_line = _top;
 			var _width;
-			if(_o.index()==0) _width = 70;
-			else if(_o.index()==1) _width = 224;
-			else if(_o.index()==2) _width = 186;
-			else if(_o.index()==3) _width = 146;
-			else if(_o.index()==4) _width = 146;
-			else if(_o.index()==5) _width = 260;
+			if(_o.index()==0) _width = _o.height()*0.5 / 16 * 33;
+			else if(_o.index()==1) _width = _o.height()*0.5 / 16 * 107;
+			else if(_o.index()==2) _width = _o.height()*0.5 / 16 * 84;
+			else if(_o.index()==3) _width = _o.height()*0.5 / 16 * 69;
+			else if(_o.index()==4) _width = _o.height()*0.5 / 16 * 68;
+			else if(_o.index()==5) _width = _o.height()*0.5 / 16 * 118;
 			$('.blue_line').animate({'top':o.blue_line,'width':_width},o.blue_line_speed);
 		}else{
 			if(o.blue_line==(_o.offset().left - $('.break_top_barin').offset().left)){return}

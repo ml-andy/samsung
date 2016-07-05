@@ -916,6 +916,8 @@
 							@include r;
 							@include font(16px,25px,#444444,bolder);
 							margin-bottom: 23px;
+							&.pc{display: block;}
+							&.moblie{display: none;}
 						}
 						.w{
 							@include r(100%,115px);
@@ -1002,6 +1004,8 @@
 							@include r;
 							@include font(16px,25px,#444444,bolder);
 							margin-bottom: 23px;
+							&.pc{display: block;}
+							&.moblie{display: none;}
 						}
 						.w{
 							@include r(100%,115px);
@@ -1088,6 +1092,8 @@
 							@include r;
 							@include font(16px,25px,#444444,bolder);
 							margin-bottom: 23px;
+							&.pc{display: block;}
+							&.moblie{display: none;}
 						}
 						.w{
 							@include r(100%,115px);
@@ -1174,6 +1180,8 @@
 							@include r;
 							@include font(16px,25px,#444444,bolder);
 							margin-bottom: 23px;
+							&.pc{display: block;}
+							&.moblie{display: none;}
 						}
 						.w{
 							@include r(100%,115px);
@@ -1981,25 +1989,26 @@
 		.rule_box{
 			@include r;
 			box-sizing:border-box;
-			padding-top: 96px;
+			padding-top: getVW(96);
 			background-color: #ededed;
 			.rule_boxin{
 				position: relative;
 				width: 100%;
 				margin: auto;
 				.title{
-					@include r(100%,35px);
+					@include rvw(640,35);
 					left: 0;
 					background: url(../images/m_rule_title.png) no-repeat;
-					background-position: 43px 0;
-					margin: 50px 0 35px 0;
+					background-size: auto 100%;
+					background-position: getVW(43) 0;
+					margin: getVW(50) 0 getVW(35) 0;
 				}
 				.rule_word{
 					@include r;
-					@include font(22px,35px,#323232);
+					@include fontvw(22,35,#323232);
 					overflow: visible;
 					box-sizing:border-box;
-					padding: 0 50px;
+					padding: 0 getVW(50);
 					.w{
 						@include r;
 						box-sizing:border-box;
@@ -2007,10 +2016,11 @@
 					}
 					ul{
 						@include r;
-						margin-bottom: 25px;
+						margin-bottom: getVW(25);
 						li{
-							@include r(505px);
-							margin-left: 35px;
+							@include r;
+							width:getVW(505);
+							margin-left: getVW(35);
 							list-style-type: decimal;
 							box-sizing:border-box;
 							padding-right: 0;
@@ -2019,8 +2029,9 @@
 					
 				}
 				.pd{
-					@include alt(121px,113px,50%,110px,125px);
+					@include altvw(121,113,320,110,125);
 					background: url(../images/m_rule_pd.jpg) no-repeat;
+					background-size: 100%;
 					background-position: center;
 				}
 			}
@@ -2030,7 +2041,7 @@
 			overflow: visible;
 			background-color: #ededed;
 			.sub{
-				@include flt(100%,96px,0,96px);
+				@include fltvw(640,96,0,96);
 				background-color: #f8f8f8;
 				z-index: 99;
 				box-sizing:border-box;
@@ -2040,7 +2051,7 @@
 					cursor: pointer;
 					background-repeat: no-repeat;
 					&:before{
-						@include font(23px,95px,#000000,bolder);
+						@include fontvw(23,95,#000000,bolder);
 						text-align: center;
 						content:"";
 						@include alt;
@@ -2051,8 +2062,9 @@
 					}
 					&:after{
 						content:"";
-						@include alb(75px,5px,50%);
+						@include albvw(75,5);
 						@include transform(translate(-50%,0));
+						left: 50%;
 						background-color: #1429a0;
 						transition:0.3s;
 						top:auto;
@@ -2127,8 +2139,9 @@
 				}
 			}
 			.linebtn{
-				@include art(60px,59px,116px,270px);
+				@include artvw(60,59,116,270);
 				background: url(../images/m_hero_linebtn.png) no-repeat;
+				background-size: 100%;
 				background-position: center;
 				cursor: pointer;
 				z-index: 10;
@@ -2138,8 +2151,9 @@
 				}
 			}
 			.chatbtn{
-				@include art(60px,59px,48px,270px);
+				@include artvw(60,59,48,270);
 				background: url(../images/m_hero_chatbtn.png) no-repeat;
+				background-size: 100%;
 				background-position: center;
 				cursor: pointer;
 				z-index: 10;
@@ -2149,13 +2163,14 @@
 				}
 			}
 			.fbshare{
-				@include art(60px,59px,186px,270px);
+				@include artvw(60,59,186,270);
 				cursor: pointer;
 				z-index: 10;
 				&:before{
 					content:"";
 					@include alt;
 					background: url(../images/m_hero_fbbtn.png) no-repeat;
+					background-size: 100%;
 					background-position: center 0;
 					transition:0.3s;
 					opacity:1;
@@ -2168,15 +2183,19 @@
 				}
 			}
 			.leftbtn{
-				@include flt(65px,140px,0,50%,0,-70px);
+				@include fltvw(65,140,0,320,0,-70);
+				top: 50vh;
 				background: url(../images/m_hero_leftbtn.png) no-repeat;
+				background-size: 100%;
 				background-position: center;
 				cursor: pointer;
 				z-index: 99;
 			}
 			.rightbtn{
-				@include frt(65px,140px,0,50%,0,-70px);
+				@include frtvw(65,140,0,320,0,-70);
+				top: 50vh;
 				background: url(../images/m_hero_rightbtn.png) no-repeat;
+				background-size: 100%;
 				background-position: center;
 				cursor: pointer;
 				z-index: 99;
@@ -2193,7 +2212,7 @@
 								opacity: 1;
 							}
 							.bg{
-								margin-left: -254px;
+								margin-left: getVW(-254);
 								opacity: 1;
 							}
 						}
@@ -2204,15 +2223,15 @@
 							opacity: 1;
 							z-index: 9;
 							box-sizing:border-box;
-							padding: 30px 60px;
-							margin-top: 188px;
+							padding: getVW(30) getVW(60);
+							margin-top: getVW(188);
 							.t{
 								@include r;
-								@include font(32px,47px,#2d2d2d);
-								letter-spacing: 1px;
-								margin-bottom: 15px;
+								@include fontvw(32,47,#2d2d2d);
+								letter-spacing: getVW(1);
+								margin-bottom: getVW(15);
 								span{
-									@include font(32px,47px,#2d2d2d,bolder);
+									@include fontvw(32,47,#2d2d2d,bolder);
 									display: inline-block;
 									letter-spacing: 1px;
 									&:after{
@@ -2224,24 +2243,24 @@
 							}
 							.st{
 								@include r;
-								@include font(22px,28px,#444444,bolder);
-								margin-bottom: 35px;
+								@include fontvw(22,28,#444444,bolder);
+								margin-bottom: getVW(35);
 								&.pc{display: none;}
 								&.moblie{display: block;}
 							}
 							.w{
 								@include r;
-								margin-top: 360px;
+								margin-top: getVW(360);
 								.w_in{
 									@include r;
-									@include font(22px,35px,#2d2d2d);
+									@include fontvw(22,35,#2d2d2d);
 									box-sizing:border-box;
 									padding-right: 0px;
-									letter-spacing: 1px;
+									letter-spacing: getVW(1);
 								}
 							}
 							.btn{
-								@include alt(509px,54px,50%,470px,-254px);
+								@include altvw(509,54,320,470,-254);
 								a{
 									@include alt;
 									z-index: 9;
@@ -2250,6 +2269,7 @@
 									content:"";
 									@include alt;
 									background: url(../images/m_hero_btn1.png) no-repeat;
+									background-size: auto 100%;
 									background-position: center 0;
 									transition:0s;
 									opacity:1;
@@ -2263,8 +2283,9 @@
 							}
 						}
 						.bg{
-							@include alt(509px,286px,50%,356px,-254px);
+							@include altvw(509,286,320,356,-254);
 							background: url(../images/m_hero_kv1.jpg) no-repeat;
+							background-size: 100%;
 							background-position: center;
 							z-index: 0;
 							transition:0s;
@@ -2279,7 +2300,7 @@
 								opacity: 1;
 							}
 							.bg{
-								margin-left: -254px;
+								margin-left: getVW(-254);
 								opacity: 1;
 							}
 						}
@@ -2290,15 +2311,15 @@
 							opacity: 1;
 							z-index: 9;
 							box-sizing:border-box;
-							padding: 30px 60px;
-							margin-top: 188px;
+							padding: getVW(30) getVW(60);
+							margin-top: getVW(188);
 							.t{
 								@include r;
-								@include font(32px,47px,#2d2d2d);
-								letter-spacing: 1px;
-								margin-bottom: 15px;
+								@include fontvw(32,47,#2d2d2d);
+								letter-spacing: getVW(1);
+								margin-bottom: getVW(15);
 								span{
-									@include font(32px,47px,#2d2d2d,bolder);
+									@include fontvw(32,47,#2d2d2d,bolder);
 									display: inline-block;
 									letter-spacing: 1px;
 									&:after{
@@ -2310,24 +2331,24 @@
 							}
 							.st{
 								@include r;
-								@include font(22px,28px,#444444,bolder);
-								margin-bottom: 35px;
+								@include fontvw(22,28,#444444,bolder);
+								margin-bottom: getVW(35);
 								&.pc{display: none;}
 								&.moblie{display: block;}
 							}
 							.w{
 								@include r;
-								margin-top: 360px;
+								margin-top: getVW(360);
 								.w_in{
 									@include r;
-									@include font(22px,35px,#2d2d2d);
+									@include fontvw(22,35,#2d2d2d);
 									box-sizing:border-box;
 									padding-right: 0px;
-									letter-spacing: 1px;
+									letter-spacing: getVW(1);
 								}
 							}
 							.btn{
-								@include alt(509px,54px,50%,470px,-254px);
+								@include altvw(509,54,320,470,-254);
 								a{
 									@include alt;
 									z-index: 9;
@@ -2336,6 +2357,7 @@
 									content:"";
 									@include alt;
 									background: url(../images/m_hero_btn2.png) no-repeat;
+									background-size: auto 100%;
 									background-position: center 0;
 									transition:0s;
 									opacity:1;
@@ -2349,8 +2371,9 @@
 							}
 						}
 						.bg{
-							@include alt(509px,286px,50%,356px,-254px);
+							@include altvw(509,286,320,356,-254);
 							background: url(../images/m_hero_kv2.jpg) no-repeat;
+							background-size: 100%;
 							background-position: center;
 							z-index: 0;
 							transition:0s;
@@ -2365,7 +2388,7 @@
 								opacity: 1;
 							}
 							.bg{
-								margin-left: -254px;
+								margin-left: getVW(-254);
 								opacity: 1;
 							}
 						}
@@ -2376,15 +2399,15 @@
 							opacity: 1;
 							z-index: 9;
 							box-sizing:border-box;
-							padding: 30px 60px;
-							margin-top: 188px;
+							padding: getVW(30) getVW(60);
+							margin-top: getVW(188);
 							.t{
 								@include r;
-								@include font(32px,47px,#2d2d2d);
-								letter-spacing: 1px;
-								margin-bottom: 15px;
+								@include fontvw(32,47,#2d2d2d);
+								letter-spacing: getVW(1);
+								margin-bottom: getVW(15);
 								span{
-									@include font(32px,47px,#2d2d2d,bolder);
+									@include fontvw(32,47,#2d2d2d,bolder);
 									display: inline-block;
 									letter-spacing: 1px;
 									&:after{
@@ -2396,24 +2419,24 @@
 							}
 							.st{
 								@include r;
-								@include font(22px,28px,#444444,bolder);
-								margin-bottom: 35px;
+								@include fontvw(22,28,#444444,bolder);
+								margin-bottom: getVW(35);
 								&.pc{display: none;}
 								&.moblie{display: block;}
 							}
 							.w{
 								@include r;
-								margin-top: 360px;
+								margin-top: getVW(360);
 								.w_in{
 									@include r;
-									@include font(22px,35px,#2d2d2d);
+									@include fontvw(22,35,#2d2d2d);
 									box-sizing:border-box;
 									padding-right: 0px;
-									letter-spacing: 1px;
+									letter-spacing: getVW(1);
 								}
 							}
 							.btn{
-								@include alt(509px,54px,50%,470px,-254px);
+								@include altvw(509,54,320,470,-254);
 								a{
 									@include alt;
 									z-index: 9;
@@ -2422,6 +2445,7 @@
 									content:"";
 									@include alt;
 									background: url(../images/m_hero_btn3.png) no-repeat;
+									background-size: auto 100%;
 									background-position: center 0;
 									transition:0s;
 									opacity:1;
@@ -2435,8 +2459,9 @@
 							}
 						}
 						.bg{
-							@include alt(509px,286px,50%,356px,-254px);
+							@include altvw(509,286,320,356,-254);
 							background: url(../images/m_hero_kv3.jpg) no-repeat;
+							background-size: 100%;
 							background-position: center;
 							z-index: 0;
 							transition:0s;
@@ -2451,7 +2476,7 @@
 								opacity: 1;
 							}
 							.bg{
-								margin-left: -254px;
+								margin-left: getVW(-254);
 								opacity: 1;
 							}
 						}
@@ -2462,15 +2487,15 @@
 							opacity: 1;
 							z-index: 9;
 							box-sizing:border-box;
-							padding: 30px 60px;
-							margin-top: 188px;
+							padding: getVW(30) getVW(60);
+							margin-top: getVW(188);
 							.t{
 								@include r;
-								@include font(32px,47px,#2d2d2d);
-								letter-spacing: 1px;
-								margin-bottom: 15px;
+								@include fontvw(32,47,#2d2d2d);
+								letter-spacing: getVW(1);
+								margin-bottom: getVW(15);
 								span{
-									@include font(32px,47px,#2d2d2d,bolder);
+									@include fontvw(32,47,#2d2d2d,bolder);
 									display: inline-block;
 									letter-spacing: 1px;
 									&:after{
@@ -2482,24 +2507,24 @@
 							}
 							.st{
 								@include r;
-								@include font(22px,28px,#444444,bolder);
-								margin-bottom: 35px;
+								@include fontvw(22,28,#444444,bolder);
+								margin-bottom: getVW(35);
 								&.pc{display: none;}
 								&.moblie{display: block;}
 							}
 							.w{
 								@include r;
-								margin-top: 360px;
+								margin-top: getVW(360);
 								.w_in{
 									@include r;
-									@include font(22px,35px,#2d2d2d);
+									@include fontvw(22,35,#2d2d2d);
 									box-sizing:border-box;
 									padding-right: 0px;
-									letter-spacing: 1px;
+									letter-spacing: getVW(1);
 								}
 							}
 							.btn{
-								@include alt(509px,54px,50%,470px,-254px);
+								@include altvw(509,54,320,470,-254);
 								a{
 									@include alt;
 									z-index: 9;
@@ -2508,6 +2533,7 @@
 									content:"";
 									@include alt;
 									background: url(../images/m_hero_btn4.png) no-repeat;
+									background-size: auto 100%;
 									background-position: center 0;
 									transition:0s;
 									opacity:1;
@@ -2521,8 +2547,9 @@
 							}
 						}
 						.bg{
-							@include alt(509px,286px,50%,356px,-254px);
+							@include altvw(509,286,320,356,-254);
 							background: url(../images/m_hero_kv4.jpg) no-repeat;
+							background-size: 100%;
 							background-position: center;
 							z-index: 0;
 							transition:0s;
@@ -2537,7 +2564,7 @@
 								opacity: 1;
 							}
 							.bg{
-								margin-left: -254px;
+								margin-left: getVW(-254);
 								opacity: 1;
 							}
 						}
@@ -2548,15 +2575,15 @@
 							opacity: 1;
 							z-index: 9;
 							box-sizing:border-box;
-							padding: 30px 60px;
-							margin-top: 188px;
+							padding: getVW(30) getVW(60);
+							margin-top: getVW(188);
 							.t{
 								@include r;
-								@include font(32px,47px,#2d2d2d);
-								letter-spacing: 1px;
-								margin-bottom: 15px;
+								@include fontvw(32,47,#2d2d2d);
+								letter-spacing: getVW(1);
+								margin-bottom: getVW(15);
 								span{
-									@include font(32px,47px,#2d2d2d,bolder);
+									@include fontvw(32,47,#2d2d2d,bolder);
 									display: inline-block;
 									letter-spacing: 1px;
 									&:after{
@@ -2568,24 +2595,24 @@
 							}
 							.st{
 								@include r;
-								@include font(22px,28px,#444444,bolder);
-								margin-bottom: 35px;
+								@include fontvw(22,28,#444444,bolder);
+								margin-bottom: getVW(35);
 								&.pc{display: none;}
 								&.moblie{display: block;}
 							}
 							.w{
 								@include r;
-								margin-top: 360px;
+								margin-top: getVW(360);
 								.w_in{
 									@include r;
-									@include font(22px,35px,#2d2d2d);
+									@include fontvw(22,35,#2d2d2d);
 									box-sizing:border-box;
 									padding-right: 0px;
-									letter-spacing: 1px;
+									letter-spacing: getVW(1);
 								}
 							}
 							.btn{
-								@include alt(509px,54px,50%,470px,-254px);
+								@include altvw(509,54,320,470,-254);
 								a{
 									@include alt;
 									z-index: 9;
@@ -2594,6 +2621,7 @@
 									content:"";
 									@include alt;
 									background: url(../images/m_hero_btn5.png) no-repeat;
+									background-size: auto 100%;
 									background-position: center 0;
 									transition:0s;
 									opacity:1;
@@ -2607,8 +2635,9 @@
 							}
 						}
 						.bg{
-							@include alt(509px,286px,50%,356px,-254px);
+							@include altvw(509,286,320,356,-254);
 							background: url(../images/m_hero_kv5.jpg) no-repeat;
+							background-size: 100%;
 							background-position: center;
 							z-index: 0;
 							transition:0s;
