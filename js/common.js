@@ -135,7 +135,6 @@
 	});
 	$(window).load(windowLoad);
 	function windowLoad(){
-		alert('v 1.0');
 		if(o.wrp.hasClass('index')){
 			
 			//* index *//
