@@ -45,6 +45,23 @@
 	        xfbml      : true,
 	        cookie     : true
 	    });
+	    if(o.mobile){
+	    	$('.hero_box').bind('touchstart',function(e){
+				e = e.originalEvent.touches[0];
+				$('.hero_box').bind('touchmove',herotouchmove);
+				o.heromouseX = e.pageX;
+				o.heromouseY = e.pageY;
+			});
+			$('.hero_box').bind('touchend',function(e){
+				$('.hero_box').unbind('touchmove',herotouchmove);
+				checkHero();
+			});
+			function herotouchmove(e){
+				e = e.originalEvent.touches[0];
+				o.heromouseX_end = e.pageX;
+				o.heromouseY_end = e.pageY;
+			}
+	    }
 	}
 
 	//Addlistener
@@ -134,22 +151,6 @@
 			if(!o.mobile){
 				for(var i=0;i<$('.hero_box .person').length;i++){
 					$('.hero_box .person').eq(i).find('.w').mCustomScrollbar({scrollInertia:300,scrollEasing:'linear'});
-				}
-			}else{
-				$('.hero_box').bind('touchstart',function(e){
-					e = e.originalEvent.touches[0];
-					$('.hero_box').bind('touchmove',herotouchmove);
-					o.heromouseX = e.pageX;
-					o.heromouseY = e.pageY;
-				});
-				$('.hero_box').bind('touchend',function(e){
-					$('.hero_box').unbind('touchmove',herotouchmove);
-					checkHero();
-				});
-				function herotouchmove(e){
-					e = e.originalEvent.touches[0];
-					o.heromouseX_end = e.pageX;
-					o.heromouseY_end = e.pageY;
 				}
 			}
 			$('.hero_box').each(hero_boxfc);
