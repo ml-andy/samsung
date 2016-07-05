@@ -186,12 +186,21 @@
 						} 
 					}
 				}
-				.kv{
-					@include alb(892px,431px,50%,0,-446px);
-					background: url(../images/pg1_kv.png) no-repeat;
-					background-position: center top;
+				.kv_out{
+					@include alt;
 					z-index: 1;
+					.kv_in{
+						@include alt;
+						z-index: 0;
+					}
+					.kv{
+						@include alb(892px,651px,50%,-220px,-446px);
+						background: url(../images/pg1_kv.png) no-repeat;
+						background-position: center top;
+						z-index: 1;
+					}
 				}
+				
 				.bg{
 					@include alt;
 					z-index: 0;

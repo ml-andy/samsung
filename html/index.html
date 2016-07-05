@@ -17,6 +17,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 <!---->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/iframeResizer.contentWindow.min.js"></script>
 <script src="https://www.youtube.com/iframe_api"></script>
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 <!--css-->
@@ -52,19 +53,22 @@
 	</div>
 	<div class="break_wrapper index">
         <div class="page_all">
-        	<div class="page pg1" id="break_page_pg1" data-friction-y="0">
-        		<div class="title layer" data-depth="0.00"></div>
+        	<div class="page pg1">
+        		<div class="title"></div>
         		<div class="btn">
         			<a href="hero1.html" class="btn1"></a>
         			<a href="#" class="btn2"></a>
         			<div class="sroll_btn"><span></span></div>
         		</div>
-        		<div class="kv layer" data-depth="0.2"></div>
-        		<div class="bg">
-                                <div class="fire1"></div>
-        			<div class="item1 layer" data-depth="0.03"></div>
-        			<div class="item2 layer" data-depth="0.02"></div>
-        			<div class="item3 layer" data-depth="0.05"></div>
+                <div class="kv_out" data-invert-x="true" data-friction-y="0.01" id="break_page_pg1_kv">
+                    <div class="kv_in layer" data-depth="0.0"></div>
+                    <div class="kv layer" data-depth="0.2"></div>
+                </div>
+        		<div class="bg" data-invert-x="false" data-friction-y="0" id="break_page_pg1_bg">
+                    <div class="fire1 layer" data-depth="0.00"></div>
+        			<div class="item1 layer" data-depth="0.05"></div>
+        			<div class="item2 layer" data-depth="0.03"></div>
+        			<div class="item3 layer" data-depth="0.1"></div>
         			<div class="item4 layer" data-depth="0.01"></div>
         			<canvas id="canvas" width="1920" height="1080"></canvas>
         		</div>

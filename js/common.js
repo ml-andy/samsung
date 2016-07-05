@@ -22,7 +22,8 @@
 		stage.update();
 		createjs.Ticker.setFPS(lib.properties.fps);
 		createjs.Ticker.addEventListener("tick", stage);
-		o.Parallax = new Parallax(document.getElementById('break_page_pg1'));
+		o.Parallax = new Parallax(document.getElementById('break_page_pg1_kv'));
+		o.Parallax2 = new Parallax(document.getElementById('break_page_pg1_bg'));
 		FB.init({
 	        appId      : o.FBAppId,
 	        channelUrl : o.mainurl,
