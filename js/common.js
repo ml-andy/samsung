@@ -163,6 +163,7 @@
 	function checkHero(){
 		var _y = Math.abs( o.heromouseY_end - o.heromouseY);
 		var _x =o.heromouseX_end - o.heromouseX;
+		$('.st').html(_y);
 		if(_y >= o.touchvalue) return;
 		else{
 			var nownum =$('.person').attr('class').replace('person pe','').replace(' on','')*1;
