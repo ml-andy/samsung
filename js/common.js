@@ -127,9 +127,17 @@
 	//Event
 	function showmenu(_t){
 		if(_t){
-			$('.break_top_bar').addClass('on').css('height',$(window).height());
+			$('.break_top_bar').css('height',$(window).height());
+			o.menutimeout = setTimeout(function(){
+				clearTimeout(o.menutimeout);
+				$('.break_top_bar').addClass('on');
+			},500);
 		}else{
-			$('.break_top_bar').removeClass('on').attr('style','');
+			$('.break_top_bar').attr('style','');
+			o.menutimeout = setTimeout(function(){
+				clearTimeout(o.menutimeout);
+				$('.break_top_bar').removeClass('on');
+			},500);
 		}
 	}
 	function menumouseOut(){

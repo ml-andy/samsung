@@ -1235,7 +1235,6 @@
 		overflow: hidden;
 		z-index: 999;
 		&.on{
-			overflow: visible;
 			.break_top_barin .m_icon{
 				&:after{
 					opacity: 0;
