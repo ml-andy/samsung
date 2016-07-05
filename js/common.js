@@ -3,7 +3,7 @@
 	//Init
 	var o = {
 		wrp: $('.break_wrapper'),
-		touchvalue: 50,
+		touchvalue: 100,
 		blue_line_speed: 100,
 		videoID: 'bRhpkp1_qEI',
 		videolink: 'https://www.youtube.com/watch?v=bRhpkp1_qEI',
