@@ -3,7 +3,7 @@
 	//Init
 	var o = {
 		wrp: $('.break_wrapper'),
-		touchvalue: 100,
+		touchvalue: 16,
 		blue_line_speed: 100,
 		videoID: 'bRhpkp1_qEI',
 		videolink: 'https://www.youtube.com/watch?v=bRhpkp1_qEI',
@@ -136,17 +136,21 @@
 					$('.hero_box .person').eq(i).find('.w').mCustomScrollbar({scrollInertia:300,scrollEasing:'linear'});
 				}
 			}else{
-				$(window).on('touchstart',function(e){
+				$(window).bind('touchstart',function(e){
 					e = e.originalEvent.touches[0];
 					o.heromouseX = e.pageX;
 					o.heromouseY = e.pageY;
+					$('.hero_box').bind('touchmove',herotouchmove);
 				});
-				$(window).on('touchend',function(e){
+				$(window).bind('touchend',function(e){
+					$('.hero_box').unbind('touchmove',herotouchmove);
+					checkHero();
+				});
+				function herotouchmove(e){
 					e = e.originalEvent.touches[0];
 					o.heromouseX_end = e.pageX;
 					o.heromouseY_end = e.pageY;
-					checkHero();
-				});
+				}
 			}
 			$('.hero_box').each(hero_boxfc);
 			showloading(false);
@@ -160,7 +164,7 @@
 		var _x =o.heromouseX_end - o.heromouseX;
 		if(_y >= o.touchvalue) return;
 		else{
-			var nownum =person.attr('class').replace('person pe','').replace(' on','')*1;
+			var nownum =$('.person').attr('class').replace('person pe','').replace(' on','')*1;
 			if(_x>0) nownum = nownum*1 + 1;
 			else nownum = nownum*1 - 1;
 			if(nownum<1){nownum=5;}
