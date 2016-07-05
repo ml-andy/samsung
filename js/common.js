@@ -60,12 +60,22 @@
 			o.sub.stop().fadeOut();
 		}
 	});
+	$('.menu').mousemove(function(){
+		clearTimeout(o.blue_linetimeout);
+	});
+	$('.menu').mouseout(function(){
+		menumouseOut();
+	});
+	o.sub.mousemove(function(){
+		clearTimeout(o.blue_linetimeout);
+	});
 	o.sub.mouseover(function(){
 		if(!o.sub.hasClass('on')){
 			o.sub.stop().addClass('on').fadeIn();	
 		}
 	});
 	o.sub.mouseout(function(){
+		menumouseOut();
 		if(o.sub.hasClass('on')){
 			o.sub.stop().removeClass('on').fadeOut();
 		}		
@@ -73,26 +83,33 @@
 	$(window).load(windowLoad);
 	function windowLoad(){
 		if(o.wrp.hasClass('index')){
-			blue_line($('.menua').eq(0));
+			o.blue_lineinit=$('.menua').eq(0);
 			createVideo('player',o.videoID,false);
 			var _random = Math.round(Math.random()*4);
 			console.log(_random);
 			$('.break_wrapper .pg3 .person').eq(_random).show();
 		}else if(o.wrp.hasClass('rule')){
-			blue_line($('.menua').eq(3));
+			o.blue_lineinit=$('.menua').eq(3);
 			$(".rule_box .rule_word").mCustomScrollbar({scrollInertia:300,scrollEasing:'linear'});
 			showloading(false);
 		}else if(o.wrp.hasClass('hero')){
-			blue_line($('.menua').eq(1));
+			o.blue_lineinit=$('.menua').eq(1);
 			for(var i=0;i<$('.hero_box .person').length;i++){
 				$('.hero_box .person').eq(i).find('.w').mCustomScrollbar({scrollInertia:300,scrollEasing:'linear'});
 			}
 			$('.hero_box').each(hero_boxfc);
 			showloading(false);
 		}
+		blue_line(o.blue_lineinit);
 	}
 
 	//Event
+	function menumouseOut(){
+		o.blue_linetimeout = setTimeout(function(){
+			clearTimeout(o.blue_linetimeout);
+			blue_line(o.blue_lineinit);
+		},1500);
+	}
 	function hero_boxfc(){
 		var leftbtn = $(this).find('.leftbtn'),
 			rightbtn = $(this).find('.rightbtn'),
