@@ -9,9 +9,12 @@
 		sub: $('.break_top_bar .sub'),
 		FBAppId: '1301973823150988',
 		mainurl: 'http://www.samsung.com/tw/campaigns/2016olympics/index.html',
-		sharetitle: 'Samsung 突破極限之巔',
-		sharedes: 'Samsung 突破極限之巔'
+		sharetitle: '突破極限之巔 - 2016里約奧運台灣代表隊 謝謝你的努力',
+		sharedes: '痛苦會過去，榮耀將留下謝謝你的努力，2016 里約奧運台灣代表隊，你們辛苦了！'
 	};
+
+	if($(window).width()<=640) o.mobile = true;
+	else o.mobile = false;
 
 	if(o.wrp.hasClass('index')){
 		var canvas, stage, exportRoot;
@@ -22,8 +25,10 @@
 		stage.update();
 		createjs.Ticker.setFPS(lib.properties.fps);
 		createjs.Ticker.addEventListener("tick", stage);
-		o.Parallax = new Parallax(document.getElementById('break_page_pg1_kv'));
-		o.Parallax2 = new Parallax(document.getElementById('break_page_pg1_bg'));
+		if(!o.mobile){
+			o.Parallax = new Parallax(document.getElementById('break_page_pg1_kv'));
+			o.Parallax2 = new Parallax(document.getElementById('break_page_pg1_bg'));
+		}
 		FB.init({
 	        appId      : o.FBAppId,
 	        channelUrl : o.mainurl,
@@ -42,6 +47,16 @@
 	}
 
 	//Addlistener
+	$('.m_icon').click(function(){
+		var _th = $(this).parent().parent();
+		if(_th.hasClass('on')){
+			_th.removeClass('on');
+			showmenu(false);
+		}else{
+			_th.addClass('on');
+			showmenu(true);
+		}
+	});
 	$('.hero_box .fbshare').click(function(){
 		shareFb(window.location.href);
 	})
@@ -54,10 +69,12 @@
 	});
 	$('.menua').mouseover(function(){
 		blue_line($(this));
-		if($(this).index()==5){
-			o.sub.stop().fadeIn();
-		}else{
-			o.sub.stop().fadeOut();
+		if(!o.mobile){
+			if($(this).index()==5){
+				o.sub.stop().fadeIn();
+			}else{
+				o.sub.stop().fadeOut();
+			}
 		}
 	});
 	$('.menu').mousemove(function(){
@@ -70,15 +87,19 @@
 		clearTimeout(o.blue_linetimeout);
 	});
 	o.sub.mouseover(function(){
-		if(!o.sub.hasClass('on')){
-			o.sub.stop().addClass('on').fadeIn();	
+		if(!o.mobile){
+			if(!o.sub.hasClass('on')){
+				o.sub.stop().addClass('on').fadeIn();	
+			}
 		}
 	});
 	o.sub.mouseout(function(){
 		menumouseOut();
-		if(o.sub.hasClass('on')){
-			o.sub.stop().removeClass('on').fadeOut();
-		}		
+		if(!o.mobile){
+			if(o.sub.hasClass('on')){
+				o.sub.stop().removeClass('on').fadeOut();
+			}
+		}
 	});
 	$(window).load(windowLoad);
 	function windowLoad(){
@@ -104,6 +125,13 @@
 	}
 
 	//Event
+	function showmenu(_t){
+		if(_t){
+			$('.break_top_bar').addClass('on').css('height',$(window).height());
+		}else{
+			$('.break_top_bar').removeClass('on').attr('style','');
+		}
+	}
 	function menumouseOut(){
 		o.blue_linetimeout = setTimeout(function(){
 			clearTimeout(o.blue_linetimeout);
@@ -136,13 +164,6 @@
 			if(nownum<1){nownum=_max;}
 			else if(nownum>_max){nownum=1;}
 			window.location.href = 'hero'+nownum+'.html';
-
-			// bt.removeClass('on').eq(nownum).addClass('on');
-			// person.eq(nownum).show();
-			// person.eq(prenum).fadeOut(300,function(){
-			// 	prenum = nownum;
-			// 	person.eq(nownum).addClass('on');
-			// }).removeClass('on');
 		}
 	}
 	function shareFb(_link){
@@ -190,11 +211,24 @@
 		}
 	}
 	function blue_line(_o){
-		if(o.blue_line==(_o.offset().left - $('.break_top_barin').offset().left)){return}
-		o.blue_line = _o.offset().left - $('.break_top_barin').offset().left;
-		$('.blue_line').animate({'left':o.blue_line,'width':_o.width()},o.blue_line_speed);
+		if(o.mobile){
+			var _top = _o.offset().top - $('.break_top_bar').offset().top + 60;
+			if(o.blue_line==_top){return}
+			o.blue_line = _top;
+			var _width;
+			if(_o.index()==0) _width = 70;
+			else if(_o.index()==1) _width = 224;
+			else if(_o.index()==2) _width = 186;
+			else if(_o.index()==3) _width = 146;
+			else if(_o.index()==4) _width = 146;
+			else if(_o.index()==5) _width = 260;
+			$('.blue_line').animate({'top':o.blue_line,'width':_width},o.blue_line_speed);
+		}else{
+			if(o.blue_line==(_o.offset().left - $('.break_top_barin').offset().left)){return}
+			o.blue_line = _o.offset().left - $('.break_top_barin').offset().left;
+			$('.blue_line').animate({'left':o.blue_line,'width':_o.width()},o.blue_line_speed);
+		}
 	}
-
   
 })//ready end  
 
