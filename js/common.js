@@ -269,7 +269,7 @@
 	}
 	function blue_line(_o){
 		if(o.mobile){
-			var _top = _o.offset().top - $('.break_top_bar').offset().top + 60;
+			var _top = _o.offset().top - $('.break_top_bar').offset().top + $('.menua').height();
 			if(o.blue_line==_top){return}
 			o.blue_line = _top;
 			var _width;

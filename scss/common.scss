@@ -1232,7 +1232,7 @@
 @media screen and (max-width: 640px) {
 	html{-webkit-text-size-adjust: 100%;}
 	.break_top_bar{
-		@include flt(100%,96px);
+		@include fltvw(640,96);
 		min-width: 100%;
 		background-color: rgba(255,255,255,0.9);
 		transition:0.5s;
@@ -1244,7 +1244,7 @@
 		&.on{
 			overflow-y: scroll;
 			-webkit-overflow-scrolling: touch;
-			padding-bottom: 100px;
+			padding-bottom: getVW(100);
 			.break_top_barin .m_icon{
 				&:after{
 					opacity: 0;
@@ -1260,20 +1260,22 @@
 			height: 100%;
 			margin: auto;
 			.logo{
-				@include r(265px,96px);
+				@include rvw(265,96);
 				background: url(../images/m_logo.png) no-repeat;
+				background-size: 90%;
 				background-position: center;
 				margin-left: 0;
 				margin-right: 0;
 			}
 			.m_icon{
-				@include art(96px,96px);
+				@include artvw(96,96);
 				z-index: 1;
 				display: block;
 				cursor: pointer;
 				&:after{
 					@include art;
 					background: url(../images/m_menu_icon.png) no-repeat;
+					background-size: 45%;
 					background-position: center;
 					content:"";
 					transition:0.5s;
@@ -1282,6 +1284,7 @@
 				&:before{
 					@include art;
 					background: url(../images/m_menu_icon2.png) no-repeat;
+					background-size: 33%;
 					background-position: center;
 					content:"";
 					transition:0.5s;
@@ -1292,14 +1295,15 @@
 				@include r(100%,100%);
 				background-color: #f1f1f1;
 				.menua{
-					@include r(100%,76px);
+					@include rvw(640,76);
 					margin: 0;
 					&:first-child{
-						margin-top: 70px;
+						margin-top: getVW(70);
 					}
 					a{
 						background-position: center;
 						background-repeat: no-repeat;
+						background-size: auto 65%;
 					}
 					.m1{
 						@include r(100%,100%);
@@ -1328,7 +1332,7 @@
 				}
 			}
 			.blue_line{
-				@include alt(auto,3px,50%);
+				@include altvw(0,3,320);
 				@include transform(translate(-50%,0));
 				bottom: auto;
 				z-index: 9;
@@ -1336,12 +1340,13 @@
 			}
 		}
 		.sub{
-			@include alt(100%,400px,0,640px);
+			@include altvw(640,400,0,640);
 			background-color: none;
 			background: url(../images/m_sub_icon.png) no-repeat;
+			background-size: auto 3.25%;
 			background-position: center top;
 			box-sizing:border-box;
-			padding-top: 13px;
+			padding-top: getVW(13);
 			z-index: 9;
 			display: block;
 			.subin{
@@ -1355,12 +1360,13 @@
 					@include r(50%,100%);
 					a{
 						margin: 0;
-						background-position: center 30px;
+						background-position: center;
+						background-size: 73%;
 						background-repeat: no-repeat;
 						&.suba1{
 							@include r(100%,100%);
 							&:before{
-								@include art(2px,200px,0,70px);
+								@include artvw(2,200,0,70);
 								z-index: 1;
 								content:"";
 								background-color: #949494;
@@ -1388,24 +1394,26 @@
 				@include r;
 				overflow: hidden;
 				&.pg1{
-					height: 1035px;
+					height: getVW(1035);
 					.title{
-						@include alt(100%,170px,0,125px);
+						@include altvw(640,170,0,125);
 						background: url(../images/m_pg1_title.png) no-repeat;
+						background-size: auto 100%;
 						background-position: center;
 						z-index: 2;
 					}
 					.btn{
-						@include alb(100%,165px);
+						@include albvw(640,165);
 						z-index: 3;
 						.btn1{
-							@include r(50%,89px);
+							@include rvw(320,89);
 							background-color: #00b3e3;
 							margin-right: 0;
 							&:before{
 								content:"";
 								@include alt;
 								background: url(../images/m_pg1_btn1.jpg) no-repeat;
+								background-size: contain;
 								background-position: center 0;
 								transition:0.3s;
 								opacity:1;
@@ -1414,6 +1422,7 @@
 								content:"";
 								@include alt;
 								background: url(../images/m_pg1_btn1.jpg) no-repeat;
+								background-size: contain;
 								background-position: center -46px;
 								transition:0.3s;
 								opacity:0;
@@ -1424,13 +1433,14 @@
 							}
 						}
 						.btn2{
-							@include r(50%,89px);
+							@include rvw(320,89);
 							background-color: #1428a0;
 							&:before{
 								content:"";
 								@include alt;
 								background: url(../images/m_pg1_btn2.jpg) no-repeat;
 								background-position: center 0;
+								background-size: contain;
 								transition:0.3s;
 								opacity:1;
 							}
@@ -1448,12 +1458,14 @@
 							}
 						}
 						.sroll_btn{
-							@include alb(67px,44px,50%,20px,-20px);
+							@include albvw(67,44,320,0,-20);
 							background: url(../images/m_pg1_scroll.png) no-repeat;
+							background-size: contain;
 							background-position: center top;
 							span{
 								content:"";
-								@include alb(29px,18px,50%,14px,-15px);
+								@include alb(100%,40%,0%);
+								margin-bottom: -getVW(14);
 								@include animation-duration(1.5s);
 							    @include animation-iteration-count(infinite);
 							    @include animation-timing-function(ease-out);					    
@@ -1461,12 +1473,13 @@
 							    z-index: 1;
 							    background: url(../images/m_pg1_scroll_icon.png) no-repeat;
 							    background-size: contain;
+							    background-position: center;
 							}
 							@include keyframes(scroll_btnani){
-							    0%  {bottom: 14px;}
-							    40%  {bottom: 0px;}
-							    60%  {bottom: 0px;}
-							    100%  {bottom: 14px;}
+							    0%  {bottom: getVW(14);}
+							    40%  {bottom: 0;}
+							    60%  {bottom: 0;}
+							    100%  {bottom: getVW(14);}
 							} 
 						}
 					}
@@ -1478,8 +1491,9 @@
 							z-index: 0;
 						}
 						.kv{
-							@include alb(100%,733px);
+							@include albvw(640,733);
 							background: url(../images/m_pg1_kv.png) no-repeat;
+							background-size: auto 100%;
 							background-position: center top;
 							z-index: 1;
 						}
@@ -1487,6 +1501,7 @@
 					.bg{
 						@include alt;
 						background: url(../images/m_pg1_bg.jpg) no-repeat;
+						background-size: contain;
 						background-position: center top;
 						z-index: 0;
 						.fire1{
@@ -1532,15 +1547,16 @@
 					}
 				}
 				&.pg2{
-					height: 970px;
+					height: getVW(970);
 					.fbshare{
-						@include arb(66px,66px,50%,60px,-33px);
+						@include arbvw(66,66,320,60,-33);
 						cursor: pointer;
 						z-index: 10;
 						&:before{
 							content:"";
 							@include alt;
 							background: url(../images/m_pg2_fbbtn.png) no-repeat;
+							background-size: contain;
 							background-position: center 0;
 							transition:0.3s;
 							opacity:1;
@@ -1562,11 +1578,12 @@
 					.cover{
 						@include alt;
 						background: url(../images/m_pg2_kv.jpg) no-repeat;
+						background-size: contain;
 						background-position: center;
 						z-index: 9;
 						cursor: pointer;
 						.play_btn{
-							@include am(100px,117px);
+							@include amvw(100,117);
 							z-index: 10;
 							&:before{
 								content:"";
@@ -1582,6 +1599,7 @@
 								content:"";
 								@include alt;
 								background: url(../images/m_pg2_btn.png) no-repeat;
+								background-size: contain;
 								background-position: center 0;
 								z-index: 1;
 								transition:0.3s;
@@ -1606,11 +1624,12 @@
 					}
 				}
 				&.pg3{
-					height: 970px;
+					height: getVW(970);
 					.person{
 						@include alt;
 						background-repeat: no-repeat;
 						background-position: center bottom;
+						background-size: 100%;
 						background-color: #f3f3f3;
 						z-index: 0;
 						display: none;
@@ -1619,32 +1638,32 @@
 						&.pe1{
 							background-image: url(../images/m_pg3_kv1.jpg);
 							.main{
-								@include alt(100%,450px);
+								@include altvw(640,450);
 								box-sizing:border-box;
-								padding: 50px 50px;
+								padding: getVW(50) getVW(50);
 								.t{
 									@include r;
-									@include font(24px,36px,#2d2d2d);
-									margin-bottom: 30px;
+									@include fontvw(24,36,#2d2d2d);
+									margin-bottom: getVW(30);
 									letter-spacing: 0px;
 									span{
-										@include font(36px,36px,#2d2d2d,bolder);
+										@include fontvw(36,36,#2d2d2d,bolder);
 										display: inline-block;
-										letter-spacing: 6px;
+										letter-spacing: getVW(6);
 										&:after{
 											content:"/";
-											margin: 0 5px;
+											margin: 0 getVW(5);;
 											display: inline-block;
 										}
 									}
 								}
 								.w{
 									@include r;
-									@include font(21px,39px,#2d2d2d);
+									@include fontvw(21,39,#2d2d2d);
 									letter-spacing: 0px;
 								}
 								.btn{
-									@include alb(510px,85px,50%,40px,-255px);
+									@include albvw(510,85,320,40,-255);
 									a{
 										@include alt;
 										z-index: 9;
@@ -1653,6 +1672,7 @@
 										content:"";
 										@include alt;
 										background: url(../images/m_pg3_btn1.png) no-repeat;
+										background-size: 100%;
 										background-position: center 0;
 										transition:0.3s;
 										opacity:1;
@@ -1676,32 +1696,32 @@
 						&.pe2{
 							background-image: url(../images/m_pg3_kv2.jpg);
 							.main{
-								@include alt(100%,450px);
+								@include altvw(640,450);
 								box-sizing:border-box;
-								padding: 50px 50px;
+								padding: getVW(50) getVW(50);
 								.t{
 									@include r;
-									@include font(24px,36px,#2d2d2d);
-									margin-bottom: 30px;
+									@include fontvw(24,36,#2d2d2d);
+									margin-bottom: getVW(30);
 									letter-spacing: 0px;
 									span{
-										@include font(36px,36px,#2d2d2d,bolder);
+										@include fontvw(36,36,#2d2d2d,bolder);
 										display: inline-block;
-										letter-spacing: 6px;
+										letter-spacing: getVW(6);
 										&:after{
 											content:"/";
-											margin: 0 5px;
+											margin: 0 getVW(5);;
 											display: inline-block;
 										}
 									}
 								}
 								.w{
 									@include r;
-									@include font(21px,39px,#2d2d2d);
+									@include fontvw(21,39,#2d2d2d);
 									letter-spacing: 0px;
 								}
 								.btn{
-									@include alb(510px,85px,50%,40px,-255px);
+									@include albvw(510,85,320,40,-255);
 									a{
 										@include alt;
 										z-index: 9;
@@ -1710,6 +1730,7 @@
 										content:"";
 										@include alt;
 										background: url(../images/m_pg3_btn2.png) no-repeat;
+										background-size: 100%;
 										background-position: center 0;
 										transition:0.3s;
 										opacity:1;
@@ -1733,32 +1754,32 @@
 						&.pe3{
 							background-image: url(../images/m_pg3_kv3.jpg);
 							.main{
-								@include alt(100%,450px);
+								@include altvw(640,450);
 								box-sizing:border-box;
-								padding: 50px 50px;
+								padding: getVW(50) getVW(50);
 								.t{
 									@include r;
-									@include font(24px,36px,#2d2d2d);
-									margin-bottom: 30px;
+									@include fontvw(24,36,#2d2d2d);
+									margin-bottom: getVW(30);
 									letter-spacing: 0px;
 									span{
-										@include font(36px,36px,#2d2d2d,bolder);
+										@include fontvw(36,36,#2d2d2d,bolder);
 										display: inline-block;
-										letter-spacing: 6px;
+										letter-spacing: getVW(6);
 										&:after{
 											content:"/";
-											margin: 0 5px;
+											margin: 0 getVW(5);;
 											display: inline-block;
 										}
 									}
 								}
 								.w{
 									@include r;
-									@include font(21px,39px,#2d2d2d);
+									@include fontvw(21,39,#2d2d2d);
 									letter-spacing: 0px;
 								}
 								.btn{
-									@include alb(510px,85px,50%,40px,-255px);
+									@include albvw(510,85,320,40,-255);
 									a{
 										@include alt;
 										z-index: 9;
@@ -1767,6 +1788,7 @@
 										content:"";
 										@include alt;
 										background: url(../images/m_pg3_btn3.png) no-repeat;
+										background-size: 100%;
 										background-position: center 0;
 										transition:0.3s;
 										opacity:1;
@@ -1790,32 +1812,32 @@
 						&.pe4{
 							background-image: url(../images/m_pg3_kv4.jpg);
 							.main{
-								@include alt(100%,450px);
+								@include altvw(640,450);
 								box-sizing:border-box;
-								padding: 50px 50px;
+								padding: getVW(50) getVW(50);
 								.t{
 									@include r;
-									@include font(24px,36px,#2d2d2d);
-									margin-bottom: 30px;
+									@include fontvw(24,36,#2d2d2d);
+									margin-bottom: getVW(30);
 									letter-spacing: 0px;
 									span{
-										@include font(36px,36px,#2d2d2d,bolder);
+										@include fontvw(36,36,#2d2d2d,bolder);
 										display: inline-block;
-										letter-spacing: 6px;
+										letter-spacing: getVW(6);
 										&:after{
 											content:"/";
-											margin: 0 5px;
+											margin: 0 getVW(5);;
 											display: inline-block;
 										}
 									}
 								}
 								.w{
 									@include r;
-									@include font(21px,39px,#2d2d2d);
+									@include fontvw(21,39,#2d2d2d);
 									letter-spacing: 0px;
 								}
 								.btn{
-									@include alb(510px,85px,50%,40px,-255px);
+									@include albvw(510,85,320,40,-255);
 									a{
 										@include alt;
 										z-index: 9;
@@ -1824,6 +1846,7 @@
 										content:"";
 										@include alt;
 										background: url(../images/m_pg3_btn4.png) no-repeat;
+										background-size: 100%;
 										background-position: center 0;
 										transition:0.3s;
 										opacity:1;
@@ -1847,32 +1870,32 @@
 						&.pe5{
 							background-image: url(../images/m_pg3_kv5.jpg);
 							.main{
-								@include alt(100%,450px);
+								@include altvw(640,450);
 								box-sizing:border-box;
-								padding: 50px 50px;
+								padding: getVW(50) getVW(50);
 								.t{
 									@include r;
-									@include font(24px,36px,#2d2d2d);
-									margin-bottom: 30px;
+									@include fontvw(24,36,#2d2d2d);
+									margin-bottom: getVW(30);
 									letter-spacing: 0px;
 									span{
-										@include font(36px,36px,#2d2d2d,bolder);
+										@include fontvw(36,36,#2d2d2d,bolder);
 										display: inline-block;
-										letter-spacing: 6px;
+										letter-spacing: getVW(6);
 										&:after{
 											content:"/";
-											margin: 0 5px;
+											margin: 0 getVW(5);;
 											display: inline-block;
 										}
 									}
 								}
 								.w{
 									@include r;
-									@include font(21px,39px,#2d2d2d);
+									@include fontvw(21,39,#2d2d2d);
 									letter-spacing: 0px;
 								}
 								.btn{
-									@include alb(510px,85px,50%,40px,-255px);
+									@include albvw(510,85,320,40,-255);
 									a{
 										@include alt;
 										z-index: 9;
@@ -1881,6 +1904,7 @@
 										content:"";
 										@include alt;
 										background: url(../images/m_pg3_btn5.png) no-repeat;
+										background-size: 100%;
 										background-position: center 0;
 										transition:0.3s;
 										opacity:1;
@@ -1904,15 +1928,17 @@
 					}
 				}
 				&.pg4{
-					height: 970px;
+					height: getVW(970);
 					background: url(../images/m_pg4_bg.jpg) no-repeat;
+					background-size: 100%;
 					background-position: center top;
 					.main{
-						@include art(100%,450px);
+						@include artvw(640,450);
 						background: url(../images/m_pg4_title.png) no-repeat;
-						background-position: 60px 62px;
+						background-size: getVW(419);
+						background-position: getVW(60) getVW(62);
 						.btn{
-							@include alb(510px,85px,50%,60px,-255px);
+							@include albvw(510,85,320,60,-255);
 							a{
 								@include alt;
 								z-index: 9;
@@ -1921,6 +1947,7 @@
 								content:"";
 								@include alt;
 								background: url(../images/m_pg4_btn.png) no-repeat;
+								background-size: 100%;
 								background-position: center 0;
 								transition:0.3s;
 								opacity:1;
