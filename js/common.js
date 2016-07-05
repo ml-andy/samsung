@@ -8,7 +8,7 @@
 		videolink: 'https://www.youtube.com/watch?v=bRhpkp1_qEI',
 		sub: $('.break_top_bar .sub'),
 		FBAppId: '1301973823150988',
-		mainurl: 'https://ml-andy.github.io/samsung/andy/',
+		mainurl: 'http://www.samsung.com/tw/campaigns/2016olympics/index.html',
 		sharetitle: 'Samsung 突破極限之巔',
 		sharedes: 'Samsung 突破極限之巔'
 	};

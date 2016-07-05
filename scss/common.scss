@@ -118,19 +118,49 @@
 					z-index: 3;
 					.btn1{
 						@include r(209px,46px);
-						background: url(../images/pg1_btn1.jpg) no-repeat;
-						background-position: center 0;
 						margin-right: 10px;
-						&:hover{
+						&:before{
+							content:"";
+							@include alt;
+							background: url(../images/pg1_btn1.jpg) no-repeat;
+							background-position: center 0;
+							transition:0.3s;
+							opacity:1;
+						}
+						&:after{
+							content:"";
+							@include alt;
+							background: url(../images/pg1_btn1.jpg) no-repeat;
 							background-position: center -46px;
+							transition:0.3s;
+							opacity:0;
+						}
+						&:hover{
+							&:before{opacity: 0;}
+							&:after{opacity: 1;}
 						}
 					}
 					.btn2{
 						@include r(209px,46px);
-						background: url(../images/pg1_btn2.jpg) no-repeat;
-						background-position: center 0;
-						&:hover{
+						&:before{
+							content:"";
+							@include alt;
+							background: url(../images/pg1_btn2.jpg) no-repeat;
+							background-position: center 0;
+							transition:0.3s;
+							opacity:1;
+						}
+						&:after{
+							content:"";
+							@include alt;
+							background: url(../images/pg1_btn2.jpg) no-repeat;
 							background-position: center -46px;
+							transition:0.3s;
+							opacity:0;
+						}
+						&:hover{
+							&:before{opacity: 0;}
+							&:after{opacity: 1;}
 						}
 					}
 					.sroll_btn{
@@ -205,12 +235,27 @@
 				height: 540px;
 				.fbshare{
 					@include arb(44px,44px,25px,25px);
-					background: url(../images/pg2_fbbtn.png) no-repeat;
-					background-position: center 0;
 					cursor: pointer;
 					z-index: 10;
-					&:hover{
+					&:before{
+						content:"";
+						@include alt;
+						background: url(../images/pg2_fbbtn.png) no-repeat;
+						background-position: center 0;
+						transition:0.3s;
+						opacity:1;
+					}
+					&:after{
+						content:"";
+						@include alt;
+						background: url(../images/pg2_fbbtn.png) no-repeat;
 						background-position: center -44px;
+						transition:0.3s;
+						opacity:0;
+					}
+					&:hover{
+						&:before{opacity: 0;}
+						&:after{opacity: 1;}
 					}
 				}
 				.cover{
@@ -293,13 +338,28 @@
 							}
 							.btn{
 								@include alb(210px,46px);
-								background: url(../images/pg3_btn1.png) no-repeat;
-								background-position: center 0;
 								a{
 									@include alt;
 								}
-								&:hover{
+								&:before{
+									content:"";
+									@include alt;
+									background: url(../images/pg3_btn1.png) no-repeat;
+									background-position: center 0;
+									transition:0.3s;
+									opacity:1;
+								}
+								&:after{
+									content:"";
+									@include alt;
+									background: url(../images/pg3_btn1.png) no-repeat;
 									background-position: center -46px;
+									transition:0.3s;
+									opacity:0;
+								}
+								&:hover{
+									&:before{opacity: 0;}
+									&:after{opacity: 1;}
 								}
 							}
 						}
@@ -331,13 +391,28 @@
 							}
 							.btn{
 								@include alb(210px,46px);
-								background: url(../images/pg3_btn2.png) no-repeat;
-								background-position: center 0;
 								a{
 									@include alt;
 								}
-								&:hover{
+								&:before{
+									content:"";
+									@include alt;
+									background: url(../images/pg3_btn2.png) no-repeat;
+									background-position: center 0;
+									transition:0.3s;
+									opacity:1;
+								}
+								&:after{
+									content:"";
+									@include alt;
+									background: url(../images/pg3_btn2.png) no-repeat;
 									background-position: center -46px;
+									transition:0.3s;
+									opacity:0;
+								}
+								&:hover{
+									&:before{opacity: 0;}
+									&:after{opacity: 1;}
 								}
 							}
 						}
@@ -369,13 +444,28 @@
 							}
 							.btn{
 								@include alb(210px,46px);
-								background: url(../images/pg3_btn3.png) no-repeat;
-								background-position: center 0;
 								a{
 									@include alt;
 								}
-								&:hover{
+								&:before{
+									content:"";
+									@include alt;
+									background: url(../images/pg3_btn3.png) no-repeat;
+									background-position: center 0;
+									transition:0.3s;
+									opacity:1;
+								}
+								&:after{
+									content:"";
+									@include alt;
+									background: url(../images/pg3_btn3.png) no-repeat;
 									background-position: center -46px;
+									transition:0.3s;
+									opacity:0;
+								}
+								&:hover{
+									&:before{opacity: 0;}
+									&:after{opacity: 1;}
 								}
 							}
 						}
@@ -406,13 +496,28 @@
 							}
 							.btn{
 								@include alb(210px,46px);
-								background: url(../images/pg3_btn4.png) no-repeat;
-								background-position: center 0;
 								a{
 									@include alt;
 								}
-								&:hover{
+								&:before{
+									content:"";
+									@include alt;
+									background: url(../images/pg3_btn4.png) no-repeat;
+									background-position: center 0;
+									transition:0.3s;
+									opacity:1;
+								}
+								&:after{
+									content:"";
+									@include alt;
+									background: url(../images/pg3_btn4.png) no-repeat;
 									background-position: center -46px;
+									transition:0.3s;
+									opacity:0;
+								}
+								&:hover{
+									&:before{opacity: 0;}
+									&:after{opacity: 1;}
 								}
 							}
 						}
@@ -443,13 +548,28 @@
 							}
 							.btn{
 								@include alb(210px,46px);
-								background: url(../images/pg3_btn5.png) no-repeat;
-								background-position: center 0;
 								a{
 									@include alt;
 								}
-								&:hover{
+								&:before{
+									content:"";
+									@include alt;
+									background: url(../images/pg3_btn5.png) no-repeat;
+									background-position: center 0;
+									transition:0.3s;
+									opacity:1;
+								}
+								&:after{
+									content:"";
+									@include alt;
+									background: url(../images/pg3_btn5.png) no-repeat;
 									background-position: center -46px;
+									transition:0.3s;
+									opacity:0;
+								}
+								&:hover{
+									&:before{opacity: 0;}
+									&:after{opacity: 1;}
 								}
 							}
 						}
@@ -466,13 +586,28 @@
 					background-position: left top;
 					.btn{
 						@include alb(210px,46px);
-						background: url(../images/pg4_btn.png) no-repeat;
-						background-position: center top;
 						a{
 							@include alt;
 						}
-						&:hover{
+						&:before{
+							content:"";
+							@include alt;
+							background: url(../images/pg4_btn.png) no-repeat;
+							background-position: center 0;
+							transition:0.3s;
+							opacity:1;
+						}
+						&:after{
+							content:"";
+							@include alt;
+							background: url(../images/pg4_btn.png) no-repeat;
 							background-position: center -46px;
+							transition:0.3s;
+							opacity:0;
+						}
+						&:hover{
+							&:before{opacity: 0;}
+							&:after{opacity: 1;}
 						}
 					}
 				}
@@ -531,43 +666,87 @@
 				background-position: center 0;
 				cursor: pointer;
 				background-repeat: no-repeat;
-				&:hover,&.on{
+				&:before{
+					content:"";
+					@include alt;
+					background-repeat: no-repeat;
+					background-position: center 0;
+					transition:0.3s;
+					opacity:1;
+				}
+				&:after{
+					content:"";
+					@include alt;
+					background-repeat: no-repeat;
 					background-position: center -98px;
+					transition:0.3s;
+					opacity:0;
+				}
+				&:hover,&.on{
+					&:before{opacity: 0;}
+					&:after{opacity: 1;}
 				}
 			}
 			.btn1{
 				@include r(17.8%,100%);
-				background-image: url(../images/hero_sub1.jpg);
+				&:before,&:before{
+					background-image: url(../images/hero_sub1.jpg);
+				}
 			}
 			.btn2{
 				@include r(17.8%,100%);
-				background-image: url(../images/hero_sub2.jpg);
+				&:before,&:before{
+					background-image: url(../images/hero_sub2.jpg);
+				}
 			}
 			.btn3{
 				@include r(17.8%,100%);
-				background-image: url(../images/hero_sub3.jpg);
+				&:before,&:before{
+					background-image: url(../images/hero_sub3.jpg);
+				}
 			}
 			.btn4{
 				@include r(17.8%,100%);
-				background-image: url(../images/hero_sub4.jpg);
+				&:before,&:before{
+					background-image: url(../images/hero_sub4.jpg);
+				}
 			}
 			.btn5{
 				@include r(17.8%,100%);
-				background-image: url(../images/hero_sub5.jpg);
+				&:before,&:before{
+					background-image: url(../images/hero_sub5.jpg);
+				}
 			}
 			.btn6{
 				@include r(11%,100%);
-				background-image: url(../images/hero_sub6.jpg);
+				&:before,&:before{
+					background-image: url(../images/hero_sub6.jpg);
+				}
 			}
 		}
 		.fbshare{
 			@include art(44px,44px,20px,80px);
-			background: url(../images/pg2_fbbtn.png) no-repeat;
-			background-position: center 0;
 			cursor: pointer;
 			z-index: 10;
-			&:hover{
+			&:before{
+				content:"";
+				@include alt;
+				background: url(../images/pg2_fbbtn.png) no-repeat;
+				background-position: center 0;
+				transition:0.3s;
+				opacity:1;
+			}
+			&:after{
+				content:"";
+				@include alt;
+				background: url(../images/pg2_fbbtn.png) no-repeat;
 				background-position: center -44px;
+				transition:0.3s;
+				opacity:0;
+			}
+			&:hover{
+				&:before{opacity: 0;}
+				&:after{opacity: 1;}
 			}
 		}
 		.leftbtn{
@@ -639,13 +818,28 @@
 						}
 						.btn{
 							@include alb(210px,46px);
-							background: url(../images/hero_player_btn2.png) no-repeat;
-							background-position: center 0;
 							a{
 								@include alt;
 							}
-							&:hover{
+							&:before{
+								content:"";
+								@include alt;
+								background: url(../images/hero_player_btn2.jpg) no-repeat;
+								background-position: center 0;
+								transition:0.3s;
+								opacity:1;
+							}
+							&:after{
+								content:"";
+								@include alt;
+								background: url(../images/hero_player_btn2.jpg) no-repeat;
 								background-position: center -46px;
+								transition:0.3s;
+								opacity:0;
+							}
+							&:hover{
+								&:before{opacity: 0;}
+								&:after{opacity: 1;}
 							}
 						}
 					}
@@ -709,13 +903,28 @@
 						}
 						.btn{
 							@include alb(210px,46px);
-							background: url(../images/hero_player_btn4.png) no-repeat;
-							background-position: center 0;
 							a{
 								@include alt;
 							}
-							&:hover{
+							&:before{
+								content:"";
+								@include alt;
+								background: url(../images/hero_player_btn4.jpg) no-repeat;
+								background-position: center 0;
+								transition:0.3s;
+								opacity:1;
+							}
+							&:after{
+								content:"";
+								@include alt;
+								background: url(../images/hero_player_btn4.jpg) no-repeat;
 								background-position: center -46px;
+								transition:0.3s;
+								opacity:0;
+							}
+							&:hover{
+								&:before{opacity: 0;}
+								&:after{opacity: 1;}
 							}
 						}
 					}
@@ -779,13 +988,28 @@
 						}
 						.btn{
 							@include alb(210px,46px);
-							background: url(../images/hero_player_btn3.png) no-repeat;
-							background-position: center 0;
 							a{
 								@include alt;
 							}
-							&:hover{
+							&:before{
+								content:"";
+								@include alt;
+								background: url(../images/hero_player_btn3.jpg) no-repeat;
+								background-position: center 0;
+								transition:0.3s;
+								opacity:1;
+							}
+							&:after{
+								content:"";
+								@include alt;
+								background: url(../images/hero_player_btn3.jpg) no-repeat;
 								background-position: center -46px;
+								transition:0.3s;
+								opacity:0;
+							}
+							&:hover{
+								&:before{opacity: 0;}
+								&:after{opacity: 1;}
 							}
 						}
 					}
@@ -849,13 +1073,28 @@
 						}
 						.btn{
 							@include alb(210px,46px);
-							background: url(../images/hero_player_btn1.png) no-repeat;
-							background-position: center 0;
 							a{
 								@include alt;
 							}
-							&:hover{
+							&:before{
+								content:"";
+								@include alt;
+								background: url(../images/hero_player_btn1jpg) no-repeat;
+								background-position: center 0;
+								transition:0.3s;
+								opacity:1;
+							}
+							&:after{
+								content:"";
+								@include alt;
+								background: url(../images/hero_player_btn1.jpg) no-repeat;
 								background-position: center -46px;
+								transition:0.3s;
+								opacity:0;
+							}
+							&:hover{
+								&:before{opacity: 0;}
+								&:after{opacity: 1;}
 							}
 						}
 					}
@@ -919,13 +1158,28 @@
 						}
 						.btn{
 							@include alb(210px,46px);
-							background: url(../images/hero_player_btn5.png) no-repeat;
-							background-position: center 0;
 							a{
 								@include alt;
 							}
-							&:hover{
+							&:before{
+								content:"";
+								@include alt;
+								background: url(../images/hero_player_btn5.jpg) no-repeat;
+								background-position: center 0;
+								transition:0.3s;
+								opacity:1;
+							}
+							&:after{
+								content:"";
+								@include alt;
+								background: url(../images/hero_player_btn5.jpg) no-repeat;
 								background-position: center -46px;
+								transition:0.3s;
+								opacity:0;
+							}
+							&:hover{
+								&:before{opacity: 0;}
+								&:after{opacity: 1;}
 							}
 						}
 					}
