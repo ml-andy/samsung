@@ -111,22 +111,31 @@
 	$(window).load(windowLoad);
 	function windowLoad(){
 		if(o.wrp.hasClass('index')){
+			
+			//* index *//
 			o.blue_lineinit=$('.menua').eq(0);
 			createVideo('player',o.videoID,false);
 			var _random = Math.round(Math.random()*4);
 			console.log(_random);
 			$('.break_wrapper .pg3 .person').eq(_random).show();
+
 		}else if(o.wrp.hasClass('rule')){
+
+			//* rule *//
 			o.blue_lineinit=$('.menua').eq(3);
-			$(".rule_box .rule_word").mCustomScrollbar({scrollInertia:300,scrollEasing:'linear'});
+			if(!o.mobile) $(".rule_box .rule_word").mCustomScrollbar({scrollInertia:300,scrollEasing:'linear'});
 			showloading(false);
+
 		}else if(o.wrp.hasClass('hero')){
+
+			//* hero *//
 			o.blue_lineinit=$('.menua').eq(1);
 			for(var i=0;i<$('.hero_box .person').length;i++){
 				$('.hero_box .person').eq(i).find('.w').mCustomScrollbar({scrollInertia:300,scrollEasing:'linear'});
 			}
 			$('.hero_box').each(hero_boxfc);
 			showloading(false);
+
 		}
 		blue_line(o.blue_lineinit);
 	}

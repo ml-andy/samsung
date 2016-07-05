@@ -1940,44 +1940,48 @@
 			}
 		}
 		.rule_box{
-			@include r(100%,600px);
+			@include r;
 			box-sizing:border-box;
-			padding-top: 70px;
+			padding-top: 96px;
 			background-color: #ededed;
 			.rule_boxin{
 				position: relative;
 				width: 100%;
 				margin: auto;
 				.title{
-					@include alt(144px,34px,50%,60px,-420px);
-					background: url(../images/rule_title.png) no-repeat;
-					background-position: center;
+					@include r(100%,35px);
+					left: 0;
+					background: url(../images/m_rule_title.png) no-repeat;
+					background-position: 43px 0;
+					margin: 50px 0 35px 0;
 				}
 				.rule_word{
-					@include alt(490px,310px,50%,120px,-420px);
-					@include font(14px,26px,#323232);
-					overflow: hidden;
+					@include r;
+					@include font(22px,35px,#323232);
+					overflow: visible;
+					box-sizing:border-box;
+					padding: 0 50px;
 					.w{
 						@include r;
 						box-sizing:border-box;
-						padding-right: 35px;
+						padding-right: 0;
 					}
 					ul{
 						@include r;
 						margin-bottom: 25px;
 						li{
-							@include r(450px);
+							@include r(505px);
 							margin-left: 35px;
 							list-style-type: decimal;
 							box-sizing:border-box;
-							padding-right: 35px;
+							padding-right: 0;
 						}
 					}
 					
 				}
 				.pd{
-					@include alt(551px,531px,50%,0,65px);
-					background: url(../images/rule_pd.jpg) no-repeat;
+					@include alt(121px,113px,50%,110px,125px);
+					background: url(../images/m_rule_pd.jpg) no-repeat;
 					background-position: center;
 				}
 			}
