@@ -50,14 +50,14 @@
 	$(window).on('touchmove',function(){
 		if(o.mobile){
 			if($('.break_top_bar').hasClass('on')){
-				$('.break_top_bar').css('height',$(window).height()+100);
+				$('.break_top_bar').addClass('on_end').css('height',$(window).height()+100);
 			}
 		}
 	});
 	$('.m_icon').click(function(){
 		var _th = $(this).parent().parent();
 		if(_th.hasClass('on')){
-			_th.removeClass('on');
+			_th.removeClass('on_end').removeClass('on');
 			showmenu(false);
 		}else{
 			_th.addClass('on');
@@ -134,17 +134,9 @@
 	//Event
 	function showmenu(_t){
 		if(_t){
-			$('.break_top_bar').css('height',$(window).height());
-			o.menutimeout = setTimeout(function(){
-				clearTimeout(o.menutimeout);
-				$('.break_top_bar').addClass('on');
-			},500);
+			$('.break_top_bar').css('height',$(window).height()).addClass('on');
 		}else{
-			$('.break_top_bar').attr('style','');
-			o.menutimeout = setTimeout(function(){
-				clearTimeout(o.menutimeout);
-				$('.break_top_bar').removeClass('on');
-			},500);
+			$('.break_top_bar').attr('style','').removeClass('on');
 		}
 	}
 	function menumouseOut(){

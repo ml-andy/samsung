@@ -1234,11 +1234,13 @@
 		transition:0.5s;
 		overflow: hidden;
 		z-index: 999;
+		&.on_end{
+			transition:0s;
+		}
 		&.on{
 			overflow-y: scroll;
 			-webkit-overflow-scrolling: touch;
 			padding-bottom: 100px;
-			transition:0s;
 			.break_top_barin .m_icon{
 				&:after{
 					opacity: 0;
