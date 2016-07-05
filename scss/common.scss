@@ -1235,6 +1235,8 @@
 		overflow: hidden;
 		z-index: 999;
 		&.on{
+			overflow-y: scroll;
+			-webkit-overflow-scrolling: touch;
 			.break_top_barin .m_icon{
 				&:after{
 					opacity: 0;
@@ -1281,8 +1283,6 @@
 			.menu{
 				@include r(100%,100%);
 				background-color: #f1f1f1;
-				overflow-y: scroll;
-				-webkit-overflow-scrolling: touch;
 				.menua{
 					@include r(100%,76px);
 					margin: 0;
