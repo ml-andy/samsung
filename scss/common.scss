@@ -349,6 +349,7 @@
 								@include alb(210px,46px);
 								a{
 									@include alt;
+									z-index: 9;
 								}
 								&:before{
 									content:"";
@@ -402,6 +403,7 @@
 								@include alb(210px,46px);
 								a{
 									@include alt;
+									z-index: 9;
 								}
 								&:before{
 									content:"";
@@ -455,6 +457,7 @@
 								@include alb(210px,46px);
 								a{
 									@include alt;
+									z-index: 9;
 								}
 								&:before{
 									content:"";
@@ -507,6 +510,7 @@
 								@include alb(210px,46px);
 								a{
 									@include alt;
+									z-index: 9;
 								}
 								&:before{
 									content:"";
@@ -559,6 +563,7 @@
 								@include alb(210px,46px);
 								a{
 									@include alt;
+									z-index: 9;
 								}
 								&:before{
 									content:"";
@@ -597,6 +602,7 @@
 						@include alb(210px,46px);
 						a{
 							@include alt;
+							z-index: 9;
 						}
 						&:before{
 							content:"";
@@ -670,6 +676,7 @@
 		@include r(100%,525px);
 		.sub{
 			@include alb(100%,98px);
+			background-color: #fff;
 			z-index: 9;
 			.bt{
 				background-position: center 0;
@@ -698,37 +705,37 @@
 			}
 			.btn1{
 				@include r(17.8%,100%);
-				&:before,&:before{
+				&:before,&:after{
 					background-image: url(../images/hero_sub1.jpg);
 				}
 			}
 			.btn2{
 				@include r(17.8%,100%);
-				&:before,&:before{
+				&:before,&:after{
 					background-image: url(../images/hero_sub2.jpg);
 				}
 			}
 			.btn3{
 				@include r(17.8%,100%);
-				&:before,&:before{
+				&:before,&:after{
 					background-image: url(../images/hero_sub3.jpg);
 				}
 			}
 			.btn4{
 				@include r(17.8%,100%);
-				&:before,&:before{
+				&:before,&:after{
 					background-image: url(../images/hero_sub4.jpg);
 				}
 			}
 			.btn5{
 				@include r(17.8%,100%);
-				&:before,&:before{
+				&:before,&:after{
 					background-image: url(../images/hero_sub5.jpg);
 				}
 			}
 			.btn6{
 				@include r(11%,100%);
-				&:before,&:before{
+				&:before,&:after{
 					background-image: url(../images/hero_sub6.jpg);
 				}
 			}
@@ -829,11 +836,12 @@
 							@include alb(210px,46px);
 							a{
 								@include alt;
+								z-index: 9;
 							}
 							&:before{
 								content:"";
 								@include alt;
-								background: url(../images/hero_player_btn2.jpg) no-repeat;
+								background: url(../images/hero_player_btn2.png) no-repeat;
 								background-position: center 0;
 								transition:0.3s;
 								opacity:1;
@@ -841,7 +849,7 @@
 							&:after{
 								content:"";
 								@include alt;
-								background: url(../images/hero_player_btn2.jpg) no-repeat;
+								background: url(../images/hero_player_btn2.png) no-repeat;
 								background-position: center -46px;
 								transition:0.3s;
 								opacity:0;
@@ -914,11 +922,12 @@
 							@include alb(210px,46px);
 							a{
 								@include alt;
+								z-index: 9;
 							}
 							&:before{
 								content:"";
 								@include alt;
-								background: url(../images/hero_player_btn4.jpg) no-repeat;
+								background: url(../images/hero_player_btn4.png) no-repeat;
 								background-position: center 0;
 								transition:0.3s;
 								opacity:1;
@@ -926,7 +935,7 @@
 							&:after{
 								content:"";
 								@include alt;
-								background: url(../images/hero_player_btn4.jpg) no-repeat;
+								background: url(../images/hero_player_btn4.png) no-repeat;
 								background-position: center -46px;
 								transition:0.3s;
 								opacity:0;
@@ -999,11 +1008,12 @@
 							@include alb(210px,46px);
 							a{
 								@include alt;
+								z-index: 9;
 							}
 							&:before{
 								content:"";
 								@include alt;
-								background: url(../images/hero_player_btn3.jpg) no-repeat;
+								background: url(../images/hero_player_btn3.png) no-repeat;
 								background-position: center 0;
 								transition:0.3s;
 								opacity:1;
@@ -1011,7 +1021,7 @@
 							&:after{
 								content:"";
 								@include alt;
-								background: url(../images/hero_player_btn3.jpg) no-repeat;
+								background: url(../images/hero_player_btn3.png) no-repeat;
 								background-position: center -46px;
 								transition:0.3s;
 								opacity:0;
@@ -1084,11 +1094,12 @@
 							@include alb(210px,46px);
 							a{
 								@include alt;
+								z-index: 9;
 							}
 							&:before{
 								content:"";
 								@include alt;
-								background: url(../images/hero_player_btn1jpg) no-repeat;
+								background: url(../images/hero_player_btn1.png) no-repeat;
 								background-position: center 0;
 								transition:0.3s;
 								opacity:1;
@@ -1096,7 +1107,7 @@
 							&:after{
 								content:"";
 								@include alt;
-								background: url(../images/hero_player_btn1.jpg) no-repeat;
+								background: url(../images/hero_player_btn1.png) no-repeat;
 								background-position: center -46px;
 								transition:0.3s;
 								opacity:0;
@@ -1169,11 +1180,12 @@
 							@include alb(210px,46px);
 							a{
 								@include alt;
+								z-index: 9;
 							}
 							&:before{
 								content:"";
 								@include alt;
-								background: url(../images/hero_player_btn5.jpg) no-repeat;
+								background: url(../images/hero_player_btn5.png) no-repeat;
 								background-position: center 0;
 								transition:0.3s;
 								opacity:1;
@@ -1181,7 +1193,7 @@
 							&:after{
 								content:"";
 								@include alt;
-								background: url(../images/hero_player_btn5.jpg) no-repeat;
+								background: url(../images/hero_player_btn5.png) no-repeat;
 								background-position: center -46px;
 								transition:0.3s;
 								opacity:0;
