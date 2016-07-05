@@ -3,7 +3,8 @@
 	//Init
 	var o = {
 		wrp: $('.break_wrapper'),
-		touchvalue: 25,
+		touchvalueY: 25,
+		touchvalueX: 25,
 		blue_line_speed: 100,
 		videoID: 'bRhpkp1_qEI',
 		videolink: 'https://www.youtube.com/watch?v=bRhpkp1_qEI',
@@ -66,7 +67,7 @@
 
 	//Addlistener
 	$('.chatbtn').click(function(){
-		// window.open("whatsapp://send?text="+window.location.href);
+		window.open("whatsapp://send?text="+window.location.href);
 	});
 	$('.linebtn').click(function(){
 		window.open("//line.me/R/msg/text/?"+o.sharetitle+"，"+o.sharedes+ window.location.href +"　",'_blank', "toolbar=yes, scrollbars=yes, resizable=yes, top=100, left=500, width=600, height=400");
@@ -168,9 +169,11 @@
 	//Event
 	function checkHero(){
 		var _y = Math.abs( o.heromouseY_end - o.heromouseY);
-		var _x =o.heromouseX_end - o.heromouseX;
-		if(_y >= o.touchvalue) return;
+		var _x = o.heromouseX_end - o.heromouseX;
+		if(_y >= o.touchvalueY) return;
 		else{
+			if(Math.abs(_x)<=o.touchvalueX) return;
+			
 			var nownum =$('.person').attr('class').replace('person pe','').replace(' on','')*1;
 			if(_x>0) nownum = nownum*1 + 1;
 			else nownum = nownum*1 - 1;
