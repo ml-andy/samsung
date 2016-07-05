@@ -2137,14 +2137,14 @@
 				background: url(../images/m_hero_leftbtn.png) no-repeat;
 				background-position: center;
 				cursor: pointer;
-				z-index: 9;
+				z-index: 99;
 			}
 			.rightbtn{
 				@include frt(65px,140px,0,50%,0,-70px);
 				background: url(../images/m_hero_rightbtn.png) no-repeat;
 				background-position: center;
 				cursor: pointer;
-				z-index: 9;
+				z-index: 99;
 			}
 			.person_all{
 				@include r;
