@@ -4,7 +4,7 @@
 	var o = {
 		wrp: $('.break_wrapper'),
 		touchvalueY: 25,
-		touchvalueX: 25,
+		touchvalueX: 50,
 		blue_line_speed: 100,
 		videoID: 'bRhpkp1_qEI',
 		videolink: 'https://www.youtube.com/watch?v=bRhpkp1_qEI',
@@ -135,6 +135,7 @@
 	});
 	$(window).load(windowLoad);
 	function windowLoad(){
+		alert('v 1.0');
 		if(o.wrp.hasClass('index')){
 			
 			//* index *//
@@ -173,7 +174,7 @@
 		if(_y >= o.touchvalueY) return;
 		else{
 			if(Math.abs(_x)<=o.touchvalueX) return;
-			
+
 			var nownum =$('.person').attr('class').replace('person pe','').replace(' on','')*1;
 			if(_x>0) nownum = nownum*1 + 1;
 			else nownum = nownum*1 - 1;
