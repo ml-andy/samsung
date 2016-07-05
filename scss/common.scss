@@ -1230,6 +1230,14 @@
 }
 
 @media screen and (max-width: 640px) {
+	.break_loading{
+		@include flt;
+		z-index: 99999;
+		background: url(../images/loading.gif) no-repeat;
+		background-size: getVW(172);
+		background-position: center;
+		background-color: rgba(255,255,255,1);
+	}
 	html{-webkit-text-size-adjust: 100%;}
 	.break_top_bar{
 		@include fltvw(640,96);
