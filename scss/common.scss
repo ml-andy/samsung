@@ -1897,15 +1897,15 @@
 					}
 				}
 				&.pg4{
-					height: 540px;
-					background: url(../images/pg4_bg.jpg) no-repeat;
-					background-position: center;
+					height: 970px;
+					background: url(../images/m_pg4_bg.jpg) no-repeat;
+					background-position: center top;
 					.main{
-						@include art(420px,242px,50%,50%,70px,-165px);
-						background: url(../images/pg4_title.png) no-repeat;
-						background-position: left top;
+						@include art(100%,450px);
+						background: url(../images/m_pg4_title.png) no-repeat;
+						background-position: 60px 62px;
 						.btn{
-							@include alb(210px,46px);
+							@include alb(510px,85px,50%,60px,-255px);
 							a{
 								@include alt;
 								z-index: 9;
@@ -1913,7 +1913,7 @@
 							&:before{
 								content:"";
 								@include alt;
-								background: url(../images/pg4_btn.png) no-repeat;
+								background: url(../images/m_pg4_btn.png) no-repeat;
 								background-position: center 0;
 								transition:0.3s;
 								opacity:1;
@@ -1921,13 +1921,14 @@
 							&:after{
 								content:"";
 								@include alt;
-								background: url(../images/pg4_btn.png) no-repeat;
+								background: url(../images/m_pg4_btn.png) no-repeat;
 								background-position: center -46px;
 								transition:0.3s;
+								display: none;
 								opacity:0;
 							}
 							&:hover{
-								&:before{opacity: 0;}
+								&:before{opacity: 1;}
 								&:after{opacity: 1;}
 							}
 						}
