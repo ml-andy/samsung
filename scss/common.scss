@@ -745,6 +745,8 @@
 				}
 			}
 		}
+		.chatbtn{display: none;}
+		.linebtn{display: none;}
 		.fbshare{
 			@include art(44px,44px,20px,80px);
 			cursor: pointer;
@@ -826,6 +828,8 @@
 							@include r;
 							@include font(16px,25px,#444444,bolder);
 							margin-bottom: 23px;
+							&.pc{display: block;}
+							&.moblie{display: none;}
 						}
 						.w{
 							@include r(100%,115px);
@@ -1987,16 +1991,22 @@
 			}
 		}
 		.hero_box{
-			@include r(100%,525px);
+			@include r;
+			overflow: visible;
+			background-color: #ededed;
 			.sub{
-				@include alb(100%,98px);
-				background-color: #fff;
-				z-index: 9;
+				@include flt(100%,96px,0,96px);
+				background-color: #f8f8f8;
+				z-index: 99;
+				box-sizing:border-box;
+				border-top:1px solid #ededed;
 				.bt{
 					background-position: center 0;
 					cursor: pointer;
 					background-repeat: no-repeat;
 					&:before{
+						@include font(23px,95px,#000000,bolder);
+						text-align: center;
 						content:"";
 						@include alt;
 						background-repeat: no-repeat;
@@ -2006,148 +2016,197 @@
 					}
 					&:after{
 						content:"";
-						@include alt;
-						background-repeat: no-repeat;
-						background-position: center -98px;
+						@include alb(75px,5px,50%);
+						@include transform(translate(-50%,0));
+						background-color: #1429a0;
 						transition:0.3s;
+						top:auto;
 						opacity:0;
 					}
 					&:hover,&.on{
-						&:before{opacity: 0;}
-						&:after{opacity: 1;}
+						&:before{opacity: 1;}
+						&:after{
+							opacity: 1;
+						}
 					}
 				}
 				.btn1{
-					@include r(17.8%,100%);
-					&:before,&:after{
-						background-image: url(../images/hero_sub1.jpg);
+					@include r(16.6%,100%);
+					&:before{
+						content:"李智凱";
+						background-image: none;
+					}
+					&:after{
+						background-image: none;
 					}
 				}
 				.btn2{
-					@include r(17.8%,100%);
-					&:before,&:after{
-						background-image: url(../images/hero_sub2.jpg);
+					@include r(16.6%,100%);
+					&:before{
+						content:"許淑淨";
+						background-image: none;
+					}
+					&:after{
+						background-image: none;
 					}
 				}
 				.btn3{
-					@include r(17.8%,100%);
-					&:before,&:after{
-						background-image: url(../images/hero_sub3.jpg);
+					@include r(16.6%,100%);
+					&:before{
+						content:"高浩文";
+						background-image: none;
+					}
+					&:after{
+						background-image: none;
 					}
 				}
 				.btn4{
-					@include r(17.8%,100%);
-					&:before,&:after{
-						background-image: url(../images/hero_sub4.jpg);
+					@include r(16.6%,100%);
+					&:before{
+						content:"陳傑";
+						background-image: none;
+					}
+					&:after{
+						background-image: none;
 					}
 				}
 				.btn5{
-					@include r(17.8%,100%);
-					&:before,&:after{
-						background-image: url(../images/hero_sub5.jpg);
+					@include r(16.6%,100%);
+					&:before{
+						content:"譚雅婷";
+						background-image: none;
+					}
+					&:after{
+						background-image: none;
 					}
 				}
 				.btn6{
-					@include r(11%,100%);
-					&:before,&:after{
-						background-image: url(../images/hero_sub6.jpg);
+					@include r(17%,100%);
+					&:before{
+						content:"更多選手";
+						background-image: none;
+					}
+					&:after{
+						background-image: none;
 					}
 				}
 			}
+			.linebtn{
+				@include art(60px,59px,116px,270px);
+				background: url(../images/m_hero_linebtn.png) no-repeat;
+				background-position: center;
+				cursor: pointer;
+				z-index: 10;
+				display: block;
+				a{
+					@include alt;
+				}
+			}
+			.chatbtn{
+				@include art(60px,59px,48px,270px);
+				background: url(../images/m_hero_chatbtn.png) no-repeat;
+				background-position: center;
+				cursor: pointer;
+				z-index: 10;
+				display: block;
+				a{
+					@include alt;
+				}
+			}
 			.fbshare{
-				@include art(44px,44px,20px,80px);
+				@include art(60px,59px,186px,270px);
 				cursor: pointer;
 				z-index: 10;
 				&:before{
 					content:"";
 					@include alt;
-					background: url(../images/pg2_fbbtn.png) no-repeat;
+					background: url(../images/m_hero_fbbtn.png) no-repeat;
 					background-position: center 0;
 					transition:0.3s;
 					opacity:1;
 				}
 				&:after{
-					content:"";
-					@include alt;
-					background: url(../images/pg2_fbbtn.png) no-repeat;
-					background-position: center -44px;
-					transition:0.3s;
-					opacity:0;
+					display: none;
 				}
 				&:hover{
-					&:before{opacity: 0;}
-					&:after{opacity: 1;}
+					&:before{opacity: 1;}
 				}
 			}
 			.leftbtn{
-				@include alt(51px,51px,20px,50%,0,-25px);
-				background: url(../images/hero_leftbtn.png) no-repeat;
+				@include flt(65px,140px,0,50%,0,-70px);
+				background: url(../images/m_hero_leftbtn.png) no-repeat;
 				background-position: center;
 				cursor: pointer;
 				z-index: 9;
 			}
 			.rightbtn{
-				@include art(51px,51px,20px,50%,0,-25px);
-				background: url(../images/hero_rightbtn.png) no-repeat;
+				@include frt(65px,140px,0,50%,0,-70px);
+				background: url(../images/m_hero_rightbtn.png) no-repeat;
 				background-position: center;
 				cursor: pointer;
 				z-index: 9;
 			}
 			.person_all{
-				@include r(100%,100%);
+				@include r;
 				.person{
-					@include alt;
-					overflow: hidden;
+					@include r;
 					&.pe1{
 						&.on{
 							.main{
-								transition-delay:0.5s;
-								margin-left: 30px;
+								transition-delay:0s;
+								margin-left: 0px;
 								opacity: 1;
 							}
 							.bg{
-								margin-left: 0;
+								margin-left: -254px;
 								opacity: 1;
 							}
 						}
 						.main{
-							@include alt(470px,260px,50%,50%,50px,-160px);
-							transition-delay:1s;
-							transition:0.5s;
-							opacity: 0;
+							@include r;
+							transition-delay:0;
+							transition:0s;
+							opacity: 1;
 							z-index: 9;
+							box-sizing:border-box;
+							padding: 30px 60px;
+							margin-top: 188px;
 							.t{
 								@include r;
-								@include font(14px,27px,#2d2d2d);
+								@include font(32px,47px,#2d2d2d);
 								letter-spacing: 1px;
+								margin-bottom: 15px;
 								span{
-									@include font(24px,27px,#2d2d2d,bolder);
+									@include font(32px,47px,#2d2d2d,bolder);
 									display: inline-block;
-									letter-spacing: 6px;
+									letter-spacing: 1px;
 									&:after{
 										content:"/";
-										margin: 0 5px;
-										display: inline-block;
+										margin: 0;
+										display: none;
 									}
 								}
 							}
 							.st{
 								@include r;
-								@include font(16px,25px,#444444,bolder);
-								margin-bottom: 23px;
+								@include font(22px,28px,#444444,bolder);
+								margin-bottom: 35px;
+								&.pc{display: none;}
+								&.moblie{display: block;}
 							}
 							.w{
-								@include r(100%,115px);
+								@include r;
+								margin-top: 360px;
 								.w_in{
 									@include r;
-									@include font(14px,24px,#2d2d2d);
+									@include font(22px,35px,#2d2d2d);
 									box-sizing:border-box;
-									padding-right: 35px;
+									padding-right: 0px;
 									letter-spacing: 1px;
 								}
 							}
 							.btn{
-								@include alb(210px,46px);
+								@include alt(509px,54px,50%,470px,-254px);
 								a{
 									@include alt;
 									z-index: 9;
@@ -2155,85 +2214,85 @@
 								&:before{
 									content:"";
 									@include alt;
-									background: url(../images/hero_player_btn2.png) no-repeat;
+									background: url(../images/m_hero_btn1.png) no-repeat;
 									background-position: center 0;
-									transition:0.3s;
+									transition:0s;
 									opacity:1;
 								}
 								&:after{
-									content:"";
-									@include alt;
-									background: url(../images/hero_player_btn2.png) no-repeat;
-									background-position: center -46px;
-									transition:0.3s;
-									opacity:0;
+									display: none;
 								}
 								&:hover{
-									&:before{opacity: 0;}
-									&:after{opacity: 1;}
+									&:before{opacity: 1;}
 								}
 							}
 						}
 						.bg{
-							@include alt;
-							background: url(../images/hero_player1.png) no-repeat;
+							@include alt(509px,286px,50%,356px,-254px);
+							background: url(../images/m_hero_kv1.jpg) no-repeat;
 							background-position: center;
 							z-index: 0;
-							transition:0.5s;
-							margin-left: -20px;
-							opacity: 0;
+							transition:0s;
+							opacity: 1;
 						}
 					}
 					&.pe2{
 						&.on{
 							.main{
-								transition-delay:0.5s;
-								margin-left: 30px;
+								transition-delay:0s;
+								margin-left: 0px;
 								opacity: 1;
 							}
 							.bg{
-								margin-left: 0;
+								margin-left: -254px;
 								opacity: 1;
 							}
 						}
 						.main{
-							@include alt(470px,260px,50%,50%,50px,-160px);
-							transition-delay:1s;
-							transition:0.5s;
-							opacity: 0;
+							@include r;
+							transition-delay:0;
+							transition:0s;
+							opacity: 1;
 							z-index: 9;
+							box-sizing:border-box;
+							padding: 30px 60px;
+							margin-top: 188px;
 							.t{
 								@include r;
-								@include font(14px,27px,#2d2d2d);
+								@include font(32px,47px,#2d2d2d);
 								letter-spacing: 1px;
+								margin-bottom: 15px;
 								span{
-									@include font(24px,27px,#2d2d2d,bolder);
+									@include font(32px,47px,#2d2d2d,bolder);
 									display: inline-block;
-									letter-spacing: 6px;
+									letter-spacing: 1px;
 									&:after{
 										content:"/";
-										margin: 0 5px;
-										display: inline-block;
+										margin: 0;
+										display: none;
 									}
 								}
 							}
 							.st{
 								@include r;
-								@include font(16px,25px,#444444,bolder);
-								margin-bottom: 23px;
+								@include font(22px,28px,#444444,bolder);
+								margin-bottom: 35px;
+								&.pc{display: none;}
+								&.moblie{display: block;}
 							}
 							.w{
-								@include r(100%,115px);
+								@include r;
+								margin-top: 360px;
 								.w_in{
 									@include r;
-									@include font(14px,24px,#2d2d2d);
+									@include font(22px,35px,#2d2d2d);
 									box-sizing:border-box;
-									padding-right: 35px;
+									padding-right: 0px;
 									letter-spacing: 1px;
 								}
 							}
 							.btn{
-								@include alb(210px,46px);
+								@include alt(509px,54px,50%,470px,-254px);
 								a{
 									@include alt;
 									z-index: 9;
@@ -2241,85 +2300,85 @@
 								&:before{
 									content:"";
 									@include alt;
-									background: url(../images/hero_player_btn4.png) no-repeat;
+									background: url(../images/m_hero_btn2.png) no-repeat;
 									background-position: center 0;
-									transition:0.3s;
+									transition:0s;
 									opacity:1;
 								}
 								&:after{
-									content:"";
-									@include alt;
-									background: url(../images/hero_player_btn4.png) no-repeat;
-									background-position: center -46px;
-									transition:0.3s;
-									opacity:0;
+									display: none;
 								}
 								&:hover{
-									&:before{opacity: 0;}
-									&:after{opacity: 1;}
+									&:before{opacity: 1;}
 								}
 							}
 						}
 						.bg{
-							@include alt;
-							background: url(../images/hero_player2.png) no-repeat;
+							@include alt(509px,286px,50%,356px,-254px);
+							background: url(../images/m_hero_kv2.jpg) no-repeat;
 							background-position: center;
 							z-index: 0;
-							transition:0.5s;
-							margin-left: -20px;
-							opacity: 0;
+							transition:0s;
+							opacity: 1;
 						}
 					}
 					&.pe3{
 						&.on{
 							.main{
-								transition-delay:0.5s;
-								margin-left: 30px;
+								transition-delay:0s;
+								margin-left: 0px;
 								opacity: 1;
 							}
 							.bg{
-								margin-left: 0;
+								margin-left: -254px;
 								opacity: 1;
 							}
 						}
 						.main{
-							@include alt(470px,260px,50%,50%,50px,-160px);
-							transition-delay:1s;
-							transition:0.5s;
-							opacity: 0;
+							@include r;
+							transition-delay:0;
+							transition:0s;
+							opacity: 1;
 							z-index: 9;
+							box-sizing:border-box;
+							padding: 30px 60px;
+							margin-top: 188px;
 							.t{
 								@include r;
-								@include font(14px,27px,#2d2d2d);
+								@include font(32px,47px,#2d2d2d);
 								letter-spacing: 1px;
+								margin-bottom: 15px;
 								span{
-									@include font(24px,27px,#2d2d2d,bolder);
+									@include font(32px,47px,#2d2d2d,bolder);
 									display: inline-block;
-									letter-spacing: 6px;
+									letter-spacing: 1px;
 									&:after{
 										content:"/";
-										margin: 0 5px;
-										display: inline-block;
+										margin: 0;
+										display: none;
 									}
 								}
 							}
 							.st{
 								@include r;
-								@include font(16px,25px,#444444,bolder);
-								margin-bottom: 23px;
+								@include font(22px,28px,#444444,bolder);
+								margin-bottom: 35px;
+								&.pc{display: none;}
+								&.moblie{display: block;}
 							}
 							.w{
-								@include r(100%,115px);
+								@include r;
+								margin-top: 360px;
 								.w_in{
 									@include r;
-									@include font(14px,24px,#2d2d2d);
+									@include font(22px,35px,#2d2d2d);
 									box-sizing:border-box;
-									padding-right: 35px;
+									padding-right: 0px;
 									letter-spacing: 1px;
 								}
 							}
 							.btn{
-								@include alb(210px,46px);
+								@include alt(509px,54px,50%,470px,-254px);
 								a{
 									@include alt;
 									z-index: 9;
@@ -2327,85 +2386,85 @@
 								&:before{
 									content:"";
 									@include alt;
-									background: url(../images/hero_player_btn3.png) no-repeat;
+									background: url(../images/m_hero_btn3.png) no-repeat;
 									background-position: center 0;
-									transition:0.3s;
+									transition:0s;
 									opacity:1;
 								}
 								&:after{
-									content:"";
-									@include alt;
-									background: url(../images/hero_player_btn3.png) no-repeat;
-									background-position: center -46px;
-									transition:0.3s;
-									opacity:0;
+									display: none;
 								}
 								&:hover{
-									&:before{opacity: 0;}
-									&:after{opacity: 1;}
+									&:before{opacity: 1;}
 								}
 							}
 						}
 						.bg{
-							@include alt;
-							background: url(../images/hero_player3.png) no-repeat;
+							@include alt(509px,286px,50%,356px,-254px);
+							background: url(../images/m_hero_kv3.jpg) no-repeat;
 							background-position: center;
 							z-index: 0;
-							transition:0.5s;
-							margin-left: -20px;
-							opacity: 0;
+							transition:0s;
+							opacity: 1;
 						}
 					}
 					&.pe4{
 						&.on{
 							.main{
-								transition-delay:0.5s;
-								margin-left: 30px;
+								transition-delay:0s;
+								margin-left: 0px;
 								opacity: 1;
 							}
 							.bg{
-								margin-left: 0;
+								margin-left: -254px;
 								opacity: 1;
 							}
 						}
 						.main{
-							@include alt(470px,260px,50%,50%,50px,-160px);
-							transition-delay:1s;
-							transition:0.5s;
-							opacity: 0;
+							@include r;
+							transition-delay:0;
+							transition:0s;
+							opacity: 1;
 							z-index: 9;
+							box-sizing:border-box;
+							padding: 30px 60px;
+							margin-top: 188px;
 							.t{
 								@include r;
-								@include font(14px,27px,#2d2d2d);
+								@include font(32px,47px,#2d2d2d);
 								letter-spacing: 1px;
+								margin-bottom: 15px;
 								span{
-									@include font(24px,27px,#2d2d2d,bolder);
+									@include font(32px,47px,#2d2d2d,bolder);
 									display: inline-block;
-									letter-spacing: 6px;
+									letter-spacing: 1px;
 									&:after{
 										content:"/";
-										margin: 0 5px;
-										display: inline-block;
+										margin: 0;
+										display: none;
 									}
 								}
 							}
 							.st{
 								@include r;
-								@include font(16px,25px,#444444,bolder);
-								margin-bottom: 23px;
+								@include font(22px,28px,#444444,bolder);
+								margin-bottom: 35px;
+								&.pc{display: none;}
+								&.moblie{display: block;}
 							}
 							.w{
-								@include r(100%,115px);
+								@include r;
+								margin-top: 360px;
 								.w_in{
 									@include r;
-									@include font(14px,24px,#2d2d2d);
+									@include font(22px,35px,#2d2d2d);
 									box-sizing:border-box;
-									padding-right: 35px;
+									padding-right: 0px;
 									letter-spacing: 1px;
 								}
 							}
 							.btn{
-								@include alb(210px,46px);
+								@include alt(509px,54px,50%,470px,-254px);
 								a{
 									@include alt;
 									z-index: 9;
@@ -2413,85 +2472,85 @@
 								&:before{
 									content:"";
 									@include alt;
-									background: url(../images/hero_player_btn1.png) no-repeat;
+									background: url(../images/m_hero_btn4.png) no-repeat;
 									background-position: center 0;
-									transition:0.3s;
+									transition:0s;
 									opacity:1;
 								}
 								&:after{
-									content:"";
-									@include alt;
-									background: url(../images/hero_player_btn1.png) no-repeat;
-									background-position: center -46px;
-									transition:0.3s;
-									opacity:0;
+									display: none;
 								}
 								&:hover{
-									&:before{opacity: 0;}
-									&:after{opacity: 1;}
+									&:before{opacity: 1;}
 								}
 							}
 						}
 						.bg{
-							@include alt;
-							background: url(../images/hero_player4.png) no-repeat;
+							@include alt(509px,286px,50%,356px,-254px);
+							background: url(../images/m_hero_kv4.jpg) no-repeat;
 							background-position: center;
 							z-index: 0;
-							transition:0.5s;
-							margin-left: -20px;
-							opacity: 0;
+							transition:0s;
+							opacity: 1;
 						}
 					}
 					&.pe5{
 						&.on{
 							.main{
-								transition-delay:0.5s;
-								margin-left: 30px;
+								transition-delay:0s;
+								margin-left: 0px;
 								opacity: 1;
 							}
 							.bg{
-								margin-left: 0;
+								margin-left: -254px;
 								opacity: 1;
 							}
 						}
 						.main{
-							@include alt(470px,260px,50%,50%,50px,-160px);
-							transition-delay:1s;
-							transition:0.5s;
-							opacity: 0;
+							@include r;
+							transition-delay:0;
+							transition:0s;
+							opacity: 1;
 							z-index: 9;
+							box-sizing:border-box;
+							padding: 30px 60px;
+							margin-top: 188px;
 							.t{
 								@include r;
-								@include font(14px,27px,#2d2d2d);
+								@include font(32px,47px,#2d2d2d);
 								letter-spacing: 1px;
+								margin-bottom: 15px;
 								span{
-									@include font(24px,27px,#2d2d2d,bolder);
+									@include font(32px,47px,#2d2d2d,bolder);
 									display: inline-block;
-									letter-spacing: 6px;
+									letter-spacing: 1px;
 									&:after{
 										content:"/";
-										margin: 0 5px;
-										display: inline-block;
+										margin: 0;
+										display: none;
 									}
 								}
 							}
 							.st{
 								@include r;
-								@include font(16px,25px,#444444,bolder);
-								margin-bottom: 23px;
+								@include font(22px,28px,#444444,bolder);
+								margin-bottom: 35px;
+								&.pc{display: none;}
+								&.moblie{display: block;}
 							}
 							.w{
-								@include r(100%,115px);
+								@include r;
+								margin-top: 360px;
 								.w_in{
 									@include r;
-									@include font(14px,24px,#2d2d2d);
+									@include font(22px,35px,#2d2d2d);
 									box-sizing:border-box;
-									padding-right: 35px;
+									padding-right: 0px;
 									letter-spacing: 1px;
 								}
 							}
 							.btn{
-								@include alb(210px,46px);
+								@include alt(509px,54px,50%,470px,-254px);
 								a{
 									@include alt;
 									z-index: 9;
@@ -2499,33 +2558,26 @@
 								&:before{
 									content:"";
 									@include alt;
-									background: url(../images/hero_player_btn5.png) no-repeat;
+									background: url(../images/m_hero_btn5.png) no-repeat;
 									background-position: center 0;
-									transition:0.3s;
+									transition:0s;
 									opacity:1;
 								}
 								&:after{
-									content:"";
-									@include alt;
-									background: url(../images/hero_player_btn5.png) no-repeat;
-									background-position: center -46px;
-									transition:0.3s;
-									opacity:0;
+									display: none;
 								}
 								&:hover{
-									&:before{opacity: 0;}
-									&:after{opacity: 1;}
+									&:before{opacity: 1;}
 								}
 							}
 						}
 						.bg{
-							@include alt;
-							background: url(../images/hero_player5.png) no-repeat;
+							@include alt(509px,286px,50%,356px,-254px);
+							background: url(../images/m_hero_kv5.jpg) no-repeat;
 							background-position: center;
 							z-index: 0;
-							transition:0.5s;
-							margin-left: -20px;
-							opacity: 0;
+							transition:0s;
+							opacity: 1;
 						}
 					}
 				}
