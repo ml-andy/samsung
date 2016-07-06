@@ -67,6 +67,10 @@
 					@include r(118px,100%);
 					background-image: url(../images/menua6.png);
 				}
+				.m7{
+					@include r(69px,100%);
+					background-image: url(../images/menua7.png);
+				}
 			}
 		}
 		.blue_line{
@@ -1404,6 +1408,10 @@
 						@include r(100%,100%);
 						background-image: url(../images/m_menua6.png);
 					}
+					.m7{
+						@include r(100%,100%);
+						background-image: url(../images/m_menua7.png);
+					}
 				}
 			}
 			.blue_line{
@@ -1415,7 +1423,7 @@
 			}
 		}
 		.sub{
-			@include altvw(640,400,0,640);
+			@include altvw(640,400,0,685);
 			background-color: none;
 			background: url(../images/m_sub_icon.png) no-repeat;
 			background-size: auto 3.25%;
@@ -2115,6 +2123,7 @@
 					background-position: center 0;
 					cursor: pointer;
 					background-repeat: no-repeat;
+					border:0;
 					&:before{
 						@include fontvw(23,95,#000000,bolder);
 						text-align: center;
@@ -2173,7 +2182,7 @@
 					}
 				}
 				.btn4{
-					@include r(16.6%,100%);
+					@include r(13%,100%);
 					&:before{
 						content:"陳傑";
 						background-image: none;
@@ -2193,7 +2202,7 @@
 					}
 				}
 				.btn6{
-					@include r(17%,100%);
+					@include r(20.2%,100%);
 					&:before{
 						content:"更多選手";
 						background-image: none;
@@ -2248,22 +2257,26 @@
 				}
 			}
 			.leftbtn{
-				@include fltvw(65,140,0,320,0,-70);
+				@include fltvw(65,140,0,320,0,0);
 				top: 50vh;
 				background: url(../images/m_hero_leftbtn.png) no-repeat;
 				background-size: 100%;
 				background-position: center;
 				cursor: pointer;
 				z-index: 99;
+				&:before{display: none;}
+				&:after{display: none;}
 			}
 			.rightbtn{
-				@include frtvw(65,140,0,320,0,-70);
+				@include frtvw(65,140,0,320,0,0);
 				top: 50vh;
 				background: url(../images/m_hero_rightbtn.png) no-repeat;
 				background-size: 100%;
 				background-position: center;
 				cursor: pointer;
 				z-index: 99;
+				&:before{display: none;}
+				&:after{display: none;}
 			}
 			.person_all{
 				@include r;
