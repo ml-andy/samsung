@@ -1560,10 +1560,10 @@
 							    background-position: center;
 							}
 							@include keyframes(scroll_btnani){
-							    0%  {bottom: getVW(14);}
+							    0%  {bottom: getVW(7);}
 							    40%  {bottom: 0;}
 							    60%  {bottom: 0;}
-							    100%  {bottom: getVW(14);}
+							    100%  {bottom: getVW(7);}
 							} 
 						}
 					}
