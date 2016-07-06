@@ -173,7 +173,6 @@
 
 	//Event
 	function readDeviceOrientation() {
-		alert(Math.abs(window.orientation));
 	    if (Math.abs(window.orientation) == 90) {
 	        // Landscape
 	        $('.break_mobile_cover').fadeIn();
