@@ -64,7 +64,7 @@ y-axis
 
 	.mCSB_scrollTools{ /* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */
 		position: absolute;
-		width: 8px;
+		width: 40px;
 		height: auto;
 		left: auto;
 		top: 0;

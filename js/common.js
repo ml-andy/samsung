@@ -66,6 +66,11 @@
 	}
 
 	//Addlistener
+	$('.logo').click(function(){
+		if(o.mobile){
+			if(!o.wrp.hasClass('index')) window.location.href = 'index.html';
+		}
+	});
 	$('.chatbtn').click(function(){
 		window.open("whatsapp://send?text="+window.location.href);
 	});
@@ -133,6 +138,7 @@
 			}
 		}
 	});
+	window.onorientationchange = readDeviceOrientation;
 	$(window).load(windowLoad);
 	function windowLoad(){
 		if(o.wrp.hasClass('index')){
@@ -141,7 +147,6 @@
 			o.blue_lineinit=$('.menua').eq(0);
 			createVideo('player',o.videoID,false);
 			var _random = Math.round(Math.random()*4);
-			console.log(_random);
 			$('.break_wrapper .pg3 .person').eq(_random).show();
 
 		}else if(o.wrp.hasClass('rule')){
@@ -167,6 +172,16 @@
 	}
 
 	//Event
+	function readDeviceOrientation() {
+		alert(Math.abs(window.orientation));
+	    if (Math.abs(window.orientation) == 90) {
+	        // Landscape
+	        $('.break_mobile_cover').fadeIn();
+	    } else {
+	    	// Portrait
+	    	$('.break_mobile_cover').fadeOut();
+	    }
+	}
 	function checkHero(){
 		var _y = Math.abs( o.heromouseY_end - o.heromouseY);
 		var _x = o.heromouseX_end - o.heromouseX;

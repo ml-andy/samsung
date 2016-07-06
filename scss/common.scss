@@ -6,6 +6,14 @@
 	background-position: center;
 	background-color: rgba(255,255,255,1);
 }
+.break_mobile_cover{
+	@include flt;
+	z-index: 99999;
+	background: url(../images/mobile_cover.jpg) no-repeat;
+	background-position: center;
+	background-color: #040404;
+	display: none;
+}
 .break_top_bar{
 	@include flt(100%,70px);
 	min-width: 1200px;
@@ -677,14 +685,20 @@
 	}
 	.hero_box{
 		@include r(100%,525px);
+		background-color: #f1f1f1;
 		.sub{
 			@include alb(100%,98px);
 			background-color: #fff;
 			z-index: 9;
 			.bt{
+				box-sizing:border-box;
+				border-right:1px solid #dedede;
 				background-position: center 0;
 				cursor: pointer;
 				background-repeat: no-repeat;
+				&:last-child{
+					border:0;
+				}
 				&:before{
 					content:"";
 					@include alt;
@@ -741,6 +755,9 @@
 				&:before,&:after{
 					background-image: url(../images/hero_sub6.jpg);
 				}
+				&:after{
+					background-color: #1428a0;
+				}
 			}
 		}
 		.chatbtn{display: none;}
@@ -772,17 +789,53 @@
 		}
 		.leftbtn{
 			@include alt(51px,51px,20px,50%,0,-25px);
-			background: url(../images/hero_leftbtn.png) no-repeat;
-			background-position: center;
 			cursor: pointer;
 			z-index: 9;
+			&:before{
+				content:"";
+				@include alt;
+				background: url(../images/hero_leftbtn.png) no-repeat;
+				background-position: center;
+				opacity: 1;
+				transition:0.3s;
+			}
+			&:after{
+				content:"";
+				@include alt;
+				background: url(../images/left_hover.png) no-repeat;
+				background-position: center;
+				opacity: 0;
+				transition:0.3s;
+			}
+			&:hover{
+				&:before{opacity: 0;}
+				&:after{opacity: 1;}
+			}
 		}
 		.rightbtn{
 			@include art(51px,51px,20px,50%,0,-25px);
-			background: url(../images/hero_rightbtn.png) no-repeat;
-			background-position: center;
 			cursor: pointer;
 			z-index: 9;
+			&:before{
+				content:"";
+				@include alt;
+				background: url(../images/hero_rightbtn.png) no-repeat;
+				background-position: center;
+				opacity: 1;
+				transition:0.3s;
+			}
+			&:after{
+				content:"";
+				@include alt;
+				background: url(../images/right_hover.png) no-repeat;
+				background-position: center;
+				opacity: 0;
+				transition:0.3s;
+			}
+			&:hover{
+				&:before{opacity: 0;}
+				&:after{opacity: 1;}
+			}
 		}
 		.person_all{
 			@include r(100%,100%);
@@ -1236,6 +1289,7 @@
 }
 
 @media screen and (max-width: 640px) {
+	html{-webkit-text-size-adjust: 100%;}
 	.break_loading{
 		@include flt;
 		z-index: 99999;
@@ -1244,7 +1298,14 @@
 		background-position: center;
 		background-color: rgba(255,255,255,1);
 	}
-	html{-webkit-text-size-adjust: 100%;}
+	.break_mobile_cover{
+		@include flt;
+		z-index: 99999;
+		background: url(../images/mobile_cover.jpg) no-repeat;
+		background-position: center;
+		background-color: #040404;
+		display: none;
+	}
 	.break_top_bar{
 		@include fltvw(640,96);
 		min-width: 100%;
@@ -1437,13 +1498,13 @@
 								@include alt;
 								background: url(../images/m_pg1_btn1.jpg) no-repeat;
 								background-size: contain;
-								background-position: center -46px;
+								background-position: center 0;
 								transition:0.3s;
 								opacity:0;
 							}
 							&:hover{
-								&:before{opacity: 0;}
-								&:after{opacity: 1;}
+								&:before{opacity: 1;}
+								&:after{opacity: 0;}
 							}
 						}
 						.btn2{
@@ -1462,7 +1523,8 @@
 								content:"";
 								@include alt;
 								background: url(../images/m_pg1_btn2.jpg) no-repeat;
-								background-position: center -46px;
+								background-position: center 0;
+								background-size: contain;
 								transition:0.3s;
 								opacity:0;
 							}
@@ -1686,7 +1748,7 @@
 										content:"";
 										@include alt;
 										background: url(../images/m_pg3_btn1.png) no-repeat;
-										background-size: 100%;
+										background-size: contain;
 										background-position: center 0;
 										transition:0.3s;
 										opacity:1;
@@ -1695,7 +1757,8 @@
 										content:"";
 										@include alt;
 										background: url(../images/m_pg3_btn1.png) no-repeat;
-										background-position: center -46px;
+										background-position: center 0;
+										background-size: contain;
 										transition:0.3s;
 										opacity:0;
 										display: none;
@@ -1744,7 +1807,7 @@
 										content:"";
 										@include alt;
 										background: url(../images/m_pg3_btn2.png) no-repeat;
-										background-size: 100%;
+										background-size: contain;
 										background-position: center 0;
 										transition:0.3s;
 										opacity:1;
@@ -1753,7 +1816,8 @@
 										content:"";
 										@include alt;
 										background: url(../images/m_pg3_btn2.png) no-repeat;
-										background-position: center -46px;
+										background-position: center 0;
+										background-size: contain;
 										transition:0.3s;
 										opacity:0;
 										display: none;
@@ -1802,7 +1866,7 @@
 										content:"";
 										@include alt;
 										background: url(../images/m_pg3_btn3.png) no-repeat;
-										background-size: 100%;
+										background-size: contain;
 										background-position: center 0;
 										transition:0.3s;
 										opacity:1;
@@ -1811,7 +1875,8 @@
 										content:"";
 										@include alt;
 										background: url(../images/m_pg3_btn3.png) no-repeat;
-										background-position: center -46px;
+										background-position: center 0;
+										background-size: contain;
 										transition:0.3s;
 										opacity:0;
 										display: none;
@@ -1860,7 +1925,7 @@
 										content:"";
 										@include alt;
 										background: url(../images/m_pg3_btn4.png) no-repeat;
-										background-size: 100%;
+										background-size: contain;
 										background-position: center 0;
 										transition:0.3s;
 										opacity:1;
@@ -1869,7 +1934,8 @@
 										content:"";
 										@include alt;
 										background: url(../images/m_pg3_btn4.png) no-repeat;
-										background-position: center -46px;
+										background-position: center 0;
+										background-size: contain;
 										transition:0.3s;
 										opacity:0;
 										display: none;
@@ -1918,7 +1984,7 @@
 										content:"";
 										@include alt;
 										background: url(../images/m_pg3_btn5.png) no-repeat;
-										background-size: 100%;
+										background-size: contain;
 										background-position: center 0;
 										transition:0.3s;
 										opacity:1;
@@ -1927,7 +1993,8 @@
 										content:"";
 										@include alt;
 										background: url(../images/m_pg3_btn5.png) no-repeat;
-										background-position: center -46px;
+										background-position: center 0;
+										background-size: contain;
 										transition:0.3s;
 										opacity:0;
 										display: none;
