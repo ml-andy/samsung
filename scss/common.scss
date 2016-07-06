@@ -827,7 +827,7 @@
 							@include font(16px,25px,#444444,bolder);
 							margin-bottom: 23px;
 							&.pc{display: block;}
-							&.moblie{display: none;}
+							&.mobile{display: none;}
 						}
 						.w{
 							@include r(100%,115px);
@@ -915,7 +915,7 @@
 							@include font(16px,25px,#444444,bolder);
 							margin-bottom: 23px;
 							&.pc{display: block;}
-							&.moblie{display: none;}
+							&.mobile{display: none;}
 						}
 						.w{
 							@include r(100%,115px);
@@ -1003,7 +1003,7 @@
 							@include font(16px,25px,#444444,bolder);
 							margin-bottom: 23px;
 							&.pc{display: block;}
-							&.moblie{display: none;}
+							&.mobile{display: none;}
 						}
 						.w{
 							@include r(100%,115px);
@@ -1091,7 +1091,7 @@
 							@include font(16px,25px,#444444,bolder);
 							margin-bottom: 23px;
 							&.pc{display: block;}
-							&.moblie{display: none;}
+							&.mobile{display: none;}
 						}
 						.w{
 							@include r(100%,115px);
@@ -1179,7 +1179,7 @@
 							@include font(16px,25px,#444444,bolder);
 							margin-bottom: 23px;
 							&.pc{display: block;}
-							&.moblie{display: none;}
+							&.mobile{display: none;}
 						}
 						.w{
 							@include r(100%,115px);
@@ -2244,7 +2244,7 @@
 								@include fontvw(22,28,#444444,bolder);
 								margin-bottom: getVW(35);
 								&.pc{display: none;}
-								&.moblie{display: block;}
+								&.mobile{display: block;}
 							}
 							.w{
 								@include r;
@@ -2332,7 +2332,7 @@
 								@include fontvw(22,28,#444444,bolder);
 								margin-bottom: getVW(35);
 								&.pc{display: none;}
-								&.moblie{display: block;}
+								&.mobile{display: block;}
 							}
 							.w{
 								@include r;
@@ -2420,7 +2420,7 @@
 								@include fontvw(22,28,#444444,bolder);
 								margin-bottom: getVW(35);
 								&.pc{display: none;}
-								&.moblie{display: block;}
+								&.mobile{display: block;}
 							}
 							.w{
 								@include r;
@@ -2508,7 +2508,7 @@
 								@include fontvw(22,28,#444444,bolder);
 								margin-bottom: getVW(35);
 								&.pc{display: none;}
-								&.moblie{display: block;}
+								&.mobile{display: block;}
 							}
 							.w{
 								@include r;
@@ -2596,7 +2596,7 @@
 								@include fontvw(22,28,#444444,bolder);
 								margin-bottom: getVW(35);
 								&.pc{display: none;}
-								&.moblie{display: block;}
+								&.mobile{display: block;}
 							}
 							.w{
 								@include r;
