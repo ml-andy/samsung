@@ -21,7 +21,7 @@
 	if(o.wrp.hasClass('index')){
 		var canvas, stage, exportRoot;
 		canvas = document.getElementById("canvas");
-		exportRoot = new lib.firwork();
+		exportRoot = new lib.inedx();
 		stage = new createjs.Stage(canvas);
 		stage.addChild(exportRoot);
 		stage.update();

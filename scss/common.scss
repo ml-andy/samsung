@@ -86,7 +86,6 @@
 					&.suba1{
 						@include r(141px,100%);
 						background-image: url(../images/menua_sub1.jpg);
-						
 					}
 					&.suba2{
 						@include r(104px,100%);
@@ -117,7 +116,7 @@
 					z-index: 2;
 				}
 				.btn{
-					@include alb(430px,114px,50%,0,-215px);
+					@include alb(430px,190px,50%,0,-215px);
 					z-index: 3;
 					.btn1{
 						@include r(209px,46px);
@@ -209,9 +208,8 @@
 					z-index: 0;
 					.fire1{
 						@include alt(246px,246px,50%,10px,-775px);
-						background: url(../images/pg1_fire1.png) no-repeat;
-						background-position: center;
-						z-index: 5;
+						z-index: 0;
+						display: none;
 					}
 					.item1{
 						@include alb(195px,249px,50%,0,490px);
