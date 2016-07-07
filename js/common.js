@@ -4,15 +4,15 @@
 	var o = {
 		wrp: $('.break_wrapper'),
 		touchvalueY: 25,
-		touchvalueX: 100,
+		touchvalueX: $(window).width()*0.4,
 		blue_line_speed: 100,
 		videoID: 'bRhpkp1_qEI',
 		videolink: 'https://www.youtube.com/watch?v=bRhpkp1_qEI',
 		sub: $('.break_top_bar .sub'),
 		FBAppId: '1301973823150988',
-		mainurl: 'http://www.samsung.com/tw/campaigns/2016olympics/index.html',
-		sharetitle: '突破極限之巔 - 2016里約奧運台灣代表隊 謝謝你的努力',
-		sharedes: '痛苦會過去，榮耀將留下謝謝你的努力，2016 里約奧運台灣代表隊，你們辛苦了！'
+		mainurl: 'http://www.samsung.com/tw/campaigns/olympics/',
+		sharetitle: '突破極限之巔 - 2016里約奧運代表隊 謝謝你的努力',
+		sharedes: '痛苦會過去，榮耀將留下謝謝你的努力，2016 里約奧運代表隊，你們辛苦了！'
 	};
 
 	if($(window).width()<=640) o.mobile = true;
@@ -38,6 +38,8 @@
 	        xfbml      : true,
 	        cookie     : true
 	    });
+	    $('.break_top_bar .logo').css('opacity',0);
+	    if(o.mobile) $('.break_top_barin').addClass('index');
 	}else if(o.wrp.hasClass('hero')){
 		FB.init({
 	        appId      : o.FBAppId,
@@ -67,9 +69,7 @@
 
 	//Addlistener
 	$('.logo').click(function(){
-		if(o.mobile){
-			if(!o.wrp.hasClass('index')) window.location.href = 'index.html';
-		}
+		if(!o.wrp.hasClass('index')) window.location.href = 'index.html';
 	});
 	$('.chatbtn').click(function(){
 		window.open("whatsapp://send?text="+window.location.href);
@@ -198,8 +198,16 @@
 	}
 	function showmenu(_t){
 		if(_t){
+			if(o.wrp.hasClass('index')){
+				$('.break_top_barin').removeClass('index');
+				$('.break_top_barin .logo').stop().animate({'opacity':1},300);
+			}
 			$('.break_top_bar').css('height',$(window).height()).addClass('on');
 		}else{
+			if(o.wrp.hasClass('index')){
+				$('.break_top_barin').addClass('index');
+				$('.break_top_barin .logo').stop().animate({'opacity':0},300);
+			}
 			$('.break_top_bar').attr('style','').removeClass('on');
 		}
 	}
