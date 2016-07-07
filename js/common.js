@@ -107,7 +107,7 @@
 	$('.menua').mouseover(function(){
 		blue_line($(this));
 		if(!o.mobile){
-			if($(this).index()==5){
+			if($(this).index()==6){
 				o.sub.stop().fadeIn();
 			}else{
 				o.sub.stop().fadeOut();
