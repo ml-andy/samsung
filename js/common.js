@@ -264,7 +264,9 @@
             caption: "",
             description: o.sharedes,
             display:"popup",
-            link: _link,
+            link: "https://ml-andy.github.io/samsung/andy/index.html",
+            picture: "http://img.youtube.com/vi/bRhpkp1_qEI/0.jpg",
+	        source:'https://www.youtube.com/v/bRhpkp1_qEI?version=3&autohide=1&autoplay=1',
 	        type: 'video'
           }, function(response) {
 
