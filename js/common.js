@@ -249,12 +249,12 @@
         FB.ui({             
             method: 'feed',
             name: o.sharetitle,
-            caption: "",
+            link: _link,
+            picture: 'http://img.youtube.com/vi/bRhpkp1_qEI/0.jpg',
             description: o.sharedes,
             display:"popup",
-            picture: 'http://img.youtube.com/vi/bRhpkp1_qEI/0.jpg',
-            source:"https://www.youtube.com/v/bRhpkp1_qEI?version=3&autohide=1&autoplay=1",
-            link: window.location.href
+            source: "https://www.youtube.com/v/bRhpkp1_qEI?version=3&autohide=1&autoplay=1",
+            type: 'video'
           }, function(response) {
 
         });        
