@@ -7,7 +7,7 @@
 		touchvalueX: $(window).width()*0.4,
 		blue_line_speed: 100,
 		videoID: 'bRhpkp1_qEI',
-		videolink: 'https://www.youtube.com/watch?v=bRhpkp1_qEI',
+		videolink: 'http://bizdev.medialand.com.tw/andy/samsung/video.html',
 		sub: $('.break_top_bar .sub'),
 		FBAppId: '1301973823150988',
 		mainurl: 'http://www.samsung.com/tw/campaigns/olympics/',
@@ -108,9 +108,13 @@
 		blue_line($(this));
 		if(!o.mobile){
 			if($(this).index()==6){
-				o.sub.stop().fadeIn();
+				if(!o.sub.hasClass('on')){	
+					o.sub.stop().addClass('on').hide().css('opacity',1).fadeIn();
+				}
 			}else{
-				o.sub.stop().fadeOut();
+				if(o.sub.hasClass('on')){
+					o.sub.stop().removeClass('on').show().css('opacity',1).fadeOut();
+				}
 			}
 		}
 	});
@@ -126,7 +130,7 @@
 	o.sub.mouseover(function(){
 		if(!o.mobile){
 			if(!o.sub.hasClass('on')){
-				o.sub.stop().addClass('on').fadeIn();	
+				o.sub.stop().addClass('on').hide().css('opacity',1).fadeIn();
 			}
 		}
 	});
@@ -134,7 +138,7 @@
 		menumouseOut();
 		if(!o.mobile){
 			if(o.sub.hasClass('on')){
-				o.sub.stop().removeClass('on').fadeOut();
+				o.sub.stop().removeClass('on').show().css('opacity',1).fadeOut();
 			}
 		}
 	});
@@ -261,13 +265,9 @@
         FB.ui({             
             method: 'feed',
             name: o.sharetitle,
-            // caption: "",
             description: o.sharedes,
             display:"popup",
-            link: "https://ml-andy.github.io/samsung/andy/index.html",
-            picture: "http://img.youtube.com/vi/bRhpkp1_qEI/0.jpg",
-	        source: 'https://youtube.googleapis.com/v/bRhpkp1_qEI',
-	        type: 'video'
+            link: o.videolink
           }, function(response) {
 
         });        
