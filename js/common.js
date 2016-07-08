@@ -252,8 +252,8 @@
             caption: "",
             description: o.sharedes,
             display:"popup",
-            redirect_uri: window.location.href,
-            link: _link
+            source:_link,
+            link: window.location.href
           }, function(response) {
 
         });        
