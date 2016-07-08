@@ -265,8 +265,6 @@
             description: o.sharedes,
             display:"popup",
             link: _link,
-            // picture: "http://img.youtube.com/vi/_8_7yJH8JOY/0.jpg",
-	        // source:'https://www.youtube.com/v/_8_7yJH8JOY',
 	        type: 'video'
           }, function(response) {
 
