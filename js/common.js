@@ -98,7 +98,7 @@
 		shareFb(window.location.href);
 	})
 	$('.break_wrapper .pg2 .fbshare').click(function(){
-		shareFb("https://ml-andy.github.io/samsung/andy/video.html");
+		shareFbvideo("https://ml-andy.github.io/samsung/andy/video.html");
 	});
 	$('.videoctrl').click(function(){
 		o.video.playVideo();
@@ -253,6 +253,21 @@
             description: o.sharedes,
             display:"popup",
             link: _link
+          }, function(response) {
+
+        });        
+    }
+    function shareFbvideo(_link){
+        FB.ui({             
+            method: 'feed',
+            name: o.sharetitle,
+            caption: "",
+            description: o.sharedes,
+            display:"popup",
+            link: _link,
+            // picture: "http://img.youtube.com/vi/_8_7yJH8JOY/0.jpg",
+	        // source:'https://www.youtube.com/v/_8_7yJH8JOY',
+	        type: 'video'
           }, function(response) {
 
         });        
