@@ -249,7 +249,7 @@
         FB.ui({             
             method: 'feed',
             name: o.sharetitle,
-            link: _link,
+            link: 'https://ml-andy.github.io/samsung/andy/',
             picture: 'http://img.youtube.com/vi/bRhpkp1_qEI/0.jpg',
             description: o.sharedes,
             display:"popup",
