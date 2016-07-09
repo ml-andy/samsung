@@ -341,19 +341,20 @@
 					&.pe1{
 						background-image: url(../images/pg3_kv1.jpg);
 						.main{
-							@include alt(450px,260px,50%,50%,50px,-160px);
+							@include alt(450px,255px,50%,50%,50px,-160px);
 							.t{
 								@include r;
 								@include font(14px,27px,#2d2d2d);
-								margin-bottom: 30px;
+								margin-bottom: 22px;
 								letter-spacing: 1px;
 								span{
-									@include font(24px,27px,#2d2d2d,bolder);
+									@include font(24px,27px,#2d2d2d,bolder,'Noto Sans TC');
 									display: inline-block;
 									letter-spacing: 6px;
 									&:after{
+										@include font(14px,27px,#2d2d2d);
 										content:"/";
-										margin: 0 5px;
+										margin: 0 2px;
 										display: inline-block;
 									}
 								}
@@ -361,7 +362,7 @@
 							.w{
 								@include r;
 								@include font(14px,30px,#2d2d2d);
-								letter-spacing: 1px;
+								letter-spacing: 0px;
 							}
 							.btn{
 								@include alb(210px,46px);
@@ -395,19 +396,20 @@
 					&.pe2{
 						background-image: url(../images/pg3_kv2.jpg);
 						.main{
-							@include alt(450px,260px,50%,50%,55px,-160px);
+							@include alt(450px,255px,50%,50%,55px,-160px);
 							.t{
 								@include r;
 								@include font(14px,27px,#2d2d2d);
-								margin-bottom: 30px;
+								margin-bottom: 22px;
 								letter-spacing: 1px;
 								span{
-									@include font(24px,27px,#2d2d2d,bolder);
+									@include font(24px,27px,#2d2d2d,bolder,'Noto Sans TC');
 									display: inline-block;
 									letter-spacing: 6px;
 									&:after{
+										@include font(14px,27px,#2d2d2d);
 										content:"/";
-										margin: 0 5px;
+										margin: 0 2px;
 										display: inline-block;
 									}
 								}
@@ -415,7 +417,7 @@
 							.w{
 								@include r;
 								@include font(14px,30px,#2d2d2d);
-								letter-spacing: 1px;
+								letter-spacing: 0px;
 							}
 							.btn{
 								@include alb(210px,46px);
@@ -449,19 +451,20 @@
 					&.pe3{
 						background-image: url(../images/pg3_kv3.jpg);
 						.main{
-							@include alt(450px,260px,50%,50%,50px,-160px);
+							@include alt(450px,255px,50%,50%,50px,-160px);
 							.t{
 								@include r;
 								@include font(14px,27px,#2d2d2d);
-								margin-bottom: 30px;
+								margin-bottom: 22px;
 								letter-spacing: 1px;
 								span{
-									@include font(24px,27px,#2d2d2d,bolder);
+									@include font(24px,27px,#2d2d2d,bolder,'Noto Sans TC');
 									display: inline-block;
 									letter-spacing: 6px;
 									&:after{
+										@include font(14px,27px,#2d2d2d);
 										content:"/";
-										margin: 0 5px;
+										margin: 0 2px;
 										display: inline-block;
 									}
 								}
@@ -469,7 +472,7 @@
 							.w{
 								@include r;
 								@include font(14px,30px,#2d2d2d);
-								letter-spacing: 1px;
+								letter-spacing: 0px;
 							}
 							.btn{
 								@include alb(210px,46px);
@@ -503,18 +506,20 @@
 					&.pe4{
 						background-image: url(../images/pg3_kv4.jpg);
 						.main{
-							@include alt(450px,260px,50%,50%,50px,-160px);
+							@include alt(450px,255px,50%,50%,50px,-160px);
 							.t{
 								@include r;
 								@include font(14px,27px,#2d2d2d);
-								margin-bottom: 30px;
+								margin-bottom: 22px;
 								letter-spacing: 1px;
 								span{
-									@include font(24px,27px,#2d2d2d,bolder);
+									@include font(24px,27px,#2d2d2d,bolder,'Noto Sans TC');
 									display: inline-block;
+									letter-spacing: 6px;
 									&:after{
+										@include font(14px,27px,#2d2d2d);
 										content:"/";
-										margin: 0 5px;
+										margin: 0 2px;
 										display: inline-block;
 									}
 								}
@@ -522,7 +527,7 @@
 							.w{
 								@include r;
 								@include font(14px,30px,#2d2d2d);
-								letter-spacing: 1px;
+								letter-spacing: 0px;
 							}
 							.btn{
 								@include alb(210px,46px);
@@ -556,18 +561,20 @@
 					&.pe5{
 						background-image: url(../images/pg3_kv5.jpg);
 						.main{
-							@include alt(450px,260px,50%,50%,50px,-160px);
+							@include alt(450px,255px,50%,50%,50px,-160px);
 							.t{
 								@include r;
 								@include font(14px,27px,#2d2d2d);
-								margin-bottom: 30px;
+								margin-bottom: 22px;
 								letter-spacing: 1px;
 								span{
-									@include font(24px,27px,#2d2d2d,bolder);
+									@include font(24px,27px,#2d2d2d,bolder,'Noto Sans TC');
 									display: inline-block;
+									letter-spacing: 6px;
 									&:after{
+										@include font(14px,27px,#2d2d2d);
 										content:"/";
-										margin: 0 5px;
+										margin: 0 2px;
 										display: inline-block;
 									}
 								}
@@ -575,7 +582,7 @@
 							.w{
 								@include r;
 								@include font(14px,30px,#2d2d2d);
-								letter-spacing: 1px;
+								letter-spacing: 0px;
 							}
 							.btn{
 								@include alb(210px,46px);
@@ -889,9 +896,9 @@
 							@include font(14px,27px,#2d2d2d);
 							letter-spacing: 1px;
 							span{
-								@include font(24px,27px,#2d2d2d,bolder);
+								@include font(24px,27px,#444444,bolder,'Noto Sans TC');
 								display: inline-block;
-								letter-spacing: 6px;
+								letter-spacing: 2px;
 								&:after{
 									@include font(14px,27px,#2d2d2d);
 									content:"/";
@@ -902,7 +909,7 @@
 						}
 						.st{
 							@include r;
-							@include font(16px,25px,#444444,bolder);
+							@include font(16px,25px,#444444,bolder,'Noto Sans TC');
 							margin-bottom: 13px;
 							&.pc{display: block;}
 							&.mobile{display: none;}
@@ -978,19 +985,20 @@
 							@include font(14px,27px,#2d2d2d);
 							letter-spacing: 1px;
 							span{
-								@include font(24px,27px,#2d2d2d,bolder);
+								@include font(24px,27px,#444444,bolder,'Noto Sans TC');
 								display: inline-block;
-								letter-spacing: 6px;
+								letter-spacing: 2px;
 								&:after{
+									@include font(14px,27px,#2d2d2d);
 									content:"/";
-									margin: 0 5px;
+									margin: 0 1px;
 									display: inline-block;
 								}
 							}
 						}
 						.st{
 							@include r;
-							@include font(16px,25px,#444444,bolder);
+							@include font(16px,25px,#444444,bolder,'Noto Sans TC');
 							margin-bottom: 13px;
 							&.pc{display: block;}
 							&.mobile{display: none;}
@@ -1066,19 +1074,20 @@
 							@include font(14px,27px,#2d2d2d);
 							letter-spacing: 1px;
 							span{
-								@include font(24px,27px,#2d2d2d,bolder);
+								@include font(24px,27px,#444444,bolder,'Noto Sans TC');
 								display: inline-block;
-								letter-spacing: 6px;
+								letter-spacing: 2px;
 								&:after{
+									@include font(14px,27px,#2d2d2d);
 									content:"/";
-									margin: 0 5px;
+									margin: 0 1px;
 									display: inline-block;
 								}
 							}
 						}
 						.st{
 							@include r;
-							@include font(16px,25px,#444444,bolder);
+							@include font(16px,25px,#444444,bolder,'Noto Sans TC');
 							margin-bottom: 13px;
 							&.pc{display: block;}
 							&.mobile{display: none;}
@@ -1154,19 +1163,20 @@
 							@include font(14px,27px,#2d2d2d);
 							letter-spacing: 1px;
 							span{
-								@include font(24px,27px,#2d2d2d,bolder);
+								@include font(24px,27px,#444444,bolder,'Noto Sans TC');
 								display: inline-block;
-								letter-spacing: 6px;
+								letter-spacing: 2px;
 								&:after{
+									@include font(14px,27px,#2d2d2d);
 									content:"/";
-									margin: 0 5px;
+									margin: 0 1px;
 									display: inline-block;
 								}
 							}
 						}
 						.st{
 							@include r;
-							@include font(16px,25px,#444444,bolder);
+							@include font(16px,25px,#444444,bolder,'Noto Sans TC');
 							margin-bottom: 13px;
 							&.pc{display: block;}
 							&.mobile{display: none;}
@@ -1242,19 +1252,20 @@
 							@include font(14px,27px,#2d2d2d);
 							letter-spacing: 1px;
 							span{
-								@include font(24px,27px,#2d2d2d,bolder);
+								@include font(24px,27px,#444444,bolder,'Noto Sans TC');
 								display: inline-block;
-								letter-spacing: 6px;
+								letter-spacing: 2px;
 								&:after{
+									@include font(14px,27px,#2d2d2d);
 									content:"/";
-									margin: 0 5px;
+									margin: 0 1px;
 									display: inline-block;
 								}
 							}
 						}
 						.st{
 							@include r;
-							@include font(16px,25px,#444444,bolder);
+							@include font(16px,25px,#444444,bolder,'Noto Sans TC');
 							margin-bottom: 13px;
 							&.pc{display: block;}
 							&.mobile{display: none;}
@@ -2351,7 +2362,7 @@
 								@include r;
 								@include fontvw(32,47,#2d2d2d);
 								letter-spacing: getVW(3.5);
-								margin-bottom: getVW(15);
+								margin-bottom: getVW(5);
 								span{
 									@include fontvw(32,47,#2d2d2d,bolder);
 									display: inline-block;
@@ -2374,7 +2385,7 @@
 							}
 							.w{
 								@include r;
-								margin-top: getVW(360);
+								margin-top: getVW(365);
 								.w_in{
 									@include r;
 									@include fontvw(22,35,#2d2d2d);
@@ -2441,7 +2452,7 @@
 								@include r;
 								@include fontvw(32,47,#2d2d2d);
 								letter-spacing: getVW(3.5);
-								margin-bottom: getVW(15);
+								margin-bottom: getVW(5);
 								span{
 									@include fontvw(32,47,#2d2d2d,bolder);
 									display: inline-block;
@@ -2464,7 +2475,7 @@
 							}
 							.w{
 								@include r;
-								margin-top: getVW(360);
+								margin-top: getVW(365);
 								.w_in{
 									@include r;
 									@include fontvw(22,35,#2d2d2d);
@@ -2531,7 +2542,7 @@
 								@include r;
 								@include fontvw(32,47,#2d2d2d);
 								letter-spacing: getVW(3.5);
-								margin-bottom: getVW(15);
+								margin-bottom: getVW(5);
 								span{
 									@include fontvw(32,47,#2d2d2d,bolder);
 									display: inline-block;
@@ -2554,7 +2565,7 @@
 							}
 							.w{
 								@include r;
-								margin-top: getVW(360);
+								margin-top: getVW(365);
 								.w_in{
 									@include r;
 									@include fontvw(22,35,#2d2d2d);
@@ -2621,7 +2632,7 @@
 								@include r;
 								@include fontvw(32,47,#2d2d2d);
 								letter-spacing: getVW(3.5);
-								margin-bottom: getVW(15);
+								margin-bottom: getVW(5);
 								span{
 									@include fontvw(32,47,#2d2d2d,bolder);
 									display: inline-block;
@@ -2644,7 +2655,7 @@
 							}
 							.w{
 								@include r;
-								margin-top: getVW(360);
+								margin-top: getVW(365);
 								.w_in{
 									@include r;
 									@include fontvw(22,35,#2d2d2d);
@@ -2711,7 +2722,7 @@
 								@include r;
 								@include fontvw(32,47,#2d2d2d);
 								letter-spacing: getVW(3.5);
-								margin-bottom: getVW(15);
+								margin-bottom: getVW(5);
 								span{
 									@include fontvw(32,47,#2d2d2d,bolder);
 									display: inline-block;
@@ -2734,7 +2745,7 @@
 							}
 							.w{
 								@include r;
-								margin-top: getVW(360);
+								margin-top: getVW(365);
 								.w_in{
 									@include r;
 									@include fontvw(22,35,#2d2d2d);

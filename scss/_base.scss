@@ -1,14 +1,13 @@
 @charset "UTF-8";
 @import "compass";
-// @font-face{ 
-//   font-family: 'MyWebFont';
-//   src: url('digital-7-webfont.eot');
-//   src: url('digital-7-webfont.eot?#iefix') format('embedded-opentype'),
-//        url('digital-7-webfont.woff2') format('woff2'),
-//        url('digital-7-webfont.woff') format('woff'),
-//        url('digital-7-webfont.ttf') format('truetype'),
-//        url('digital-7-webfont.svg#digital-7regular') format('svg');
-// }
+@font-face{ 
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 500;
+  src: url('//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff2') format('woff2'),
+       url('//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff') format('woff'),
+       url('//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.otf') format('opentype');
+}
 @mixin r($wt:100%,$ht:auto){
   position:relative;
   width:$wt;
