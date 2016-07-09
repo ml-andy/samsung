@@ -893,8 +893,9 @@
 								display: inline-block;
 								letter-spacing: 6px;
 								&:after{
+									@include font(14px,27px,#2d2d2d);
 									content:"/";
-									margin: 0 5px;
+									margin: 0 1px;
 									display: inline-block;
 								}
 							}
