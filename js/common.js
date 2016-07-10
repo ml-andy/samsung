@@ -7,7 +7,7 @@
 		touchvalueX: $(window).width()*0.4,
 		blue_line_speed: 100,
 		videoID: 'bRhpkp1_qEI',
-		videolink: 'http://bizdev.medialand.com.tw/andy/samsung/video.html',
+		videolink: 'video.html',
 		sub: $('.break_top_bar .sub'),
 		FBAppId: '1301973823150988',
 		mainurl: 'http://www.samsung.com/tw/campaigns/olympics/',
