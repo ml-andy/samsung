@@ -652,6 +652,43 @@
 					}
 				}
 			}
+			&.pg5{
+				height: 540px;
+				background: url(../images/pg5_bg.jpg) no-repeat;
+				background-position: center;
+				.main{
+					@include art(440px,194px,50%,50%,-220px,-193px);
+					background: url(../images/pg5_title.png) no-repeat;
+					background-position: center top;
+					.btn{
+						@include alb(210px,46px,50%,0,-105px);
+						a{
+							@include alt;
+							z-index: 9;
+						}
+						&:before{
+							content:"";
+							@include alt;
+							background: url(../images/pg5_btn1.png) no-repeat;
+							background-position: center 0;
+							transition:0.3s;
+							opacity:1;
+						}
+						&:after{
+							content:"";
+							@include alt;
+							background: url(../images/pg5_btn1.png) no-repeat;
+							background-position: center -46px;
+							transition:0.3s;
+							opacity:0;
+						}
+						&:hover{
+							&:before{opacity: 0;}
+							&:after{opacity: 1;}
+						}
+					}
+				}
+			}
 		}
 	}
 	.rule_box{
@@ -2098,6 +2135,47 @@
 						}
 					}
 				}
+				&.pg5{
+					height: getVW(971);
+					background: url(../images/m_pg5_bg.jpg) no-repeat;
+					background-size: 100%;
+					background-position: center;
+					.main{
+						@include artvw(486,274,320,65,-243);
+						background: url(../images/m_pg5_title.png) no-repeat;
+						background-size: 100%;
+						background-position: center top;
+						.btn{
+							@include albvw(510,85);
+							a{
+								@include alt;
+								z-index: 9;
+							}
+							&:before{
+								content:"";
+								@include alt;
+								background: url(../images/m_pg5_btn1.png) no-repeat;
+								background-size: 100%;
+								background-position: center 0;
+								transition:0.3s;
+								opacity:1;
+							}
+							&:after{
+								content:"";
+								@include alt;
+								background: none;
+								background-position: center -46px;
+								transition:0.3s;
+								opacity:0;
+								display: none;
+							}
+							&:hover{
+								&:before{opacity: 1;}
+								&:after{opacity: 0;}
+							}
+						}
+					}
+				}
 			}
 		}
 		.rule_box{
@@ -2268,7 +2346,7 @@
 				}
 			}
 			.linebtn{
-				@include artvw(60,59,127,270);
+				@include artvw(60,59,145,218);
 				background: url(../images/m_hero_linebtn.png) no-repeat;
 				background-size: 100%;
 				background-position: center;
@@ -2280,7 +2358,7 @@
 				}
 			}
 			.chatbtn{
-				@include artvw(60,59,62,270);
+				@include artvw(60,59,65,218);
 				background: url(../images/m_hero_chatbtn.png) no-repeat;
 				background-size: 100%;
 				background-position: center;
@@ -2292,7 +2370,7 @@
 				}
 			}
 			.fbshare{
-				@include artvw(60,59,194,270);
+				@include artvw(60,59,227,218);
 				cursor: pointer;
 				z-index: 10;
 				&:before{
@@ -2341,7 +2419,7 @@
 						&.on{
 							.main{
 								transition-delay:0s;
-								margin-left: 0px;
+								margin-left: getVW(69);
 								opacity: 1;
 							}
 							.bg{
@@ -2351,13 +2429,18 @@
 						}
 						.main{
 							@include r;
+							width: getVW(509);
 							transition-delay:0;
 							transition:0s;
 							opacity: 1;
 							z-index: 9;
 							box-sizing:border-box;
-							padding: getVW(30) getVW(60);
-							margin-top: getVW(188);
+							padding: 0;
+							padding-bottom: getVW(105);
+							margin-left: getVW(66);
+							margin-right: getVW(65);
+							margin-top: getVW(625);
+							margin-bottom: getVW(50);
 							.t{
 								@include r;
 								@include fontvw(32,47,#2d2d2d);
@@ -2377,15 +2460,15 @@
 							}
 							.st{
 								@include r;
-								@include fontvw(22,28,#444444,bolder);
+								@include fontvw(22,33,#444444,bolder);
 								letter-spacing: getVW(-1);
-								margin-bottom: getVW(35);
+								margin-bottom: getVW(0);
 								&.pc{display: none;}
 								&.mobile{display: block;}
 							}
 							.w{
 								@include r;
-								margin-top: getVW(365);
+								margin-top: getVW(40);
 								.w_in{
 									@include r;
 									@include fontvw(22,35,#2d2d2d);
@@ -2395,7 +2478,7 @@
 								}
 							}
 							.btn{
-								@include altvw(509,54,320,470,-254);
+								@include albvw(509,70);
 								a{
 									@include alt;
 									z-index: 9;
@@ -2418,11 +2501,12 @@
 							}
 						}
 						.bg{
-							@include altvw(509,286,320,356,-254);
+							@include altvw(509,286,320,303,-254);
 							background: url(../images/m_hero_kv1.jpg) no-repeat;
 							background-size: 100%;
 							background-position: center;
-							z-index: 0;
+							cursor: pointer;
+							z-index: 20;
 							transition:0s;
 							opacity: 1;
 						}
@@ -2431,7 +2515,7 @@
 						&.on{
 							.main{
 								transition-delay:0s;
-								margin-left: 0px;
+								margin-left: getVW(69);
 								opacity: 1;
 							}
 							.bg{
@@ -2441,13 +2525,18 @@
 						}
 						.main{
 							@include r;
+							width: getVW(509);
 							transition-delay:0;
 							transition:0s;
 							opacity: 1;
 							z-index: 9;
 							box-sizing:border-box;
-							padding: getVW(30) getVW(60);
-							margin-top: getVW(188);
+							padding: 0;
+							padding-bottom: getVW(105);
+							margin-left: getVW(66);
+							margin-right: getVW(65);
+							margin-top: getVW(625);
+							margin-bottom: getVW(50);
 							.t{
 								@include r;
 								@include fontvw(32,47,#2d2d2d);
@@ -2467,15 +2556,15 @@
 							}
 							.st{
 								@include r;
-								@include fontvw(22,28,#444444,bolder);
+								@include fontvw(22,33,#444444,bolder);
 								letter-spacing: getVW(-1);
-								margin-bottom: getVW(35);
+								margin-bottom: getVW(0);
 								&.pc{display: none;}
 								&.mobile{display: block;}
 							}
 							.w{
 								@include r;
-								margin-top: getVW(365);
+								margin-top: getVW(40);
 								.w_in{
 									@include r;
 									@include fontvw(22,35,#2d2d2d);
@@ -2485,7 +2574,7 @@
 								}
 							}
 							.btn{
-								@include altvw(509,54,320,470,-254);
+								@include albvw(509,70);
 								a{
 									@include alt;
 									z-index: 9;
@@ -2508,11 +2597,12 @@
 							}
 						}
 						.bg{
-							@include altvw(509,286,320,356,-254);
+							@include altvw(509,286,320,303,-254);
 							background: url(../images/m_hero_kv2.jpg) no-repeat;
 							background-size: 100%;
 							background-position: center;
-							z-index: 0;
+							cursor: pointer;
+							z-index: 20;
 							transition:0s;
 							opacity: 1;
 						}
@@ -2521,7 +2611,7 @@
 						&.on{
 							.main{
 								transition-delay:0s;
-								margin-left: 0px;
+								margin-left: getVW(69);
 								opacity: 1;
 							}
 							.bg{
@@ -2531,13 +2621,18 @@
 						}
 						.main{
 							@include r;
+							width: getVW(509);
 							transition-delay:0;
 							transition:0s;
 							opacity: 1;
 							z-index: 9;
 							box-sizing:border-box;
-							padding: getVW(30) getVW(60);
-							margin-top: getVW(188);
+							padding: 0;
+							padding-bottom: getVW(105);
+							margin-left: getVW(66);
+							margin-right: getVW(65);
+							margin-top: getVW(625);
+							margin-bottom: getVW(50);
 							.t{
 								@include r;
 								@include fontvw(32,47,#2d2d2d);
@@ -2557,15 +2652,15 @@
 							}
 							.st{
 								@include r;
-								@include fontvw(22,28,#444444,bolder);
+								@include fontvw(22,33,#444444,bolder);
 								letter-spacing: getVW(-1);
-								margin-bottom: getVW(35);
+								margin-bottom: getVW(0);
 								&.pc{display: none;}
 								&.mobile{display: block;}
 							}
 							.w{
 								@include r;
-								margin-top: getVW(365);
+								margin-top: getVW(40);
 								.w_in{
 									@include r;
 									@include fontvw(22,35,#2d2d2d);
@@ -2575,7 +2670,7 @@
 								}
 							}
 							.btn{
-								@include altvw(509,54,320,470,-254);
+								@include albvw(509,70);
 								a{
 									@include alt;
 									z-index: 9;
@@ -2598,11 +2693,12 @@
 							}
 						}
 						.bg{
-							@include altvw(509,286,320,356,-254);
+							@include altvw(509,286,320,303,-254);
 							background: url(../images/m_hero_kv3.jpg) no-repeat;
 							background-size: 100%;
 							background-position: center;
-							z-index: 0;
+							cursor: pointer;
+							z-index: 20;
 							transition:0s;
 							opacity: 1;
 						}
@@ -2611,7 +2707,7 @@
 						&.on{
 							.main{
 								transition-delay:0s;
-								margin-left: 0px;
+								margin-left: getVW(69);
 								opacity: 1;
 							}
 							.bg{
@@ -2621,13 +2717,18 @@
 						}
 						.main{
 							@include r;
+							width: getVW(509);
 							transition-delay:0;
 							transition:0s;
 							opacity: 1;
 							z-index: 9;
 							box-sizing:border-box;
-							padding: getVW(30) getVW(60);
-							margin-top: getVW(188);
+							padding: 0;
+							padding-bottom: getVW(105);
+							margin-left: getVW(66);
+							margin-right: getVW(65);
+							margin-top: getVW(625);
+							margin-bottom: getVW(50);
 							.t{
 								@include r;
 								@include fontvw(32,47,#2d2d2d);
@@ -2647,15 +2748,15 @@
 							}
 							.st{
 								@include r;
-								@include fontvw(22,28,#444444,bolder);
-								letter-spacing: getVW(0);
-								margin-bottom: getVW(35);
+								@include fontvw(22,33,#444444,bolder);
+								letter-spacing: getVW(-1);
+								margin-bottom: getVW(0);
 								&.pc{display: none;}
 								&.mobile{display: block;}
 							}
 							.w{
 								@include r;
-								margin-top: getVW(365);
+								margin-top: getVW(40);
 								.w_in{
 									@include r;
 									@include fontvw(22,35,#2d2d2d);
@@ -2665,7 +2766,7 @@
 								}
 							}
 							.btn{
-								@include altvw(509,54,320,470,-254);
+								@include albvw(509,70);
 								a{
 									@include alt;
 									z-index: 9;
@@ -2688,11 +2789,12 @@
 							}
 						}
 						.bg{
-							@include altvw(509,286,320,356,-254);
+							@include altvw(509,286,320,303,-254);
 							background: url(../images/m_hero_kv4.jpg) no-repeat;
 							background-size: 100%;
 							background-position: center;
-							z-index: 0;
+							cursor: pointer;
+							z-index: 20;
 							transition:0s;
 							opacity: 1;
 						}
@@ -2701,7 +2803,7 @@
 						&.on{
 							.main{
 								transition-delay:0s;
-								margin-left: 0px;
+								margin-left: getVW(69);
 								opacity: 1;
 							}
 							.bg{
@@ -2711,13 +2813,18 @@
 						}
 						.main{
 							@include r;
+							width: getVW(509);
 							transition-delay:0;
 							transition:0s;
 							opacity: 1;
 							z-index: 9;
 							box-sizing:border-box;
-							padding: getVW(30) getVW(60);
-							margin-top: getVW(188);
+							padding: 0;
+							padding-bottom: getVW(105);
+							margin-left: getVW(66);
+							margin-right: getVW(65);
+							margin-top: getVW(625);
+							margin-bottom: getVW(50);
 							.t{
 								@include r;
 								@include fontvw(32,47,#2d2d2d);
@@ -2737,15 +2844,15 @@
 							}
 							.st{
 								@include r;
-								@include fontvw(22,28,#444444,bolder);
+								@include fontvw(22,33,#444444,bolder);
 								letter-spacing: getVW(-1);
-								margin-bottom: getVW(35);
+								margin-bottom: getVW(0);
 								&.pc{display: none;}
 								&.mobile{display: block;}
 							}
 							.w{
 								@include r;
-								margin-top: getVW(365);
+								margin-top: getVW(40);
 								.w_in{
 									@include r;
 									@include fontvw(22,35,#2d2d2d);
@@ -2755,7 +2862,7 @@
 								}
 							}
 							.btn{
-								@include altvw(509,54,320,470,-254);
+								@include albvw(509,70);
 								a{
 									@include alt;
 									z-index: 9;
@@ -2778,11 +2885,12 @@
 							}
 						}
 						.bg{
-							@include altvw(509,286,320,356,-254);
+							@include altvw(509,286,320,303,-254);
 							background: url(../images/m_hero_kv5.jpg) no-repeat;
 							background-size: 100%;
 							background-position: center;
-							z-index: 0;
+							cursor: pointer;
+							z-index: 20;
 							transition:0s;
 							opacity: 1;
 						}

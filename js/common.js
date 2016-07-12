@@ -6,8 +6,8 @@
 		touchvalueY: 25,
 		touchvalueX: $(window).width()*0.4,
 		blue_line_speed: 100,
-		videoID: 'bRhpkp1_qEI',
-		videolink: 'video.html',
+		videoID: 'xy4OULEL2ew',
+		videolink: 'http://www.samsung.com/tw/campaigns/olympics/video.html',
 		sub: $('.break_top_bar .sub'),
 		FBAppId: '1301973823150988',
 		mainurl: 'http://www.samsung.com/tw/campaigns/olympics/',
@@ -98,7 +98,7 @@
 		shareFb(window.location.href);
 	})
 	$('.break_wrapper .pg2 .fbshare').click(function(){
-		shareFbvideo("https://ml-andy.github.io/samsung/andy/video.html");
+		shareFbvideo();
 	});
 	$('.videoctrl').click(function(){
 		o.video.playVideo();
@@ -241,6 +241,10 @@
 		});
 		bt.click(function(){
 			nownum = $(this).index() + 1;
+			if(nownum==6){
+				window.open('https://tw.youcard.yahoo.com/cardstack/b6511ea0-2644-11e6-a450-a1c2efa13529');
+				return;
+			}
 			changehero();
 		});
 		function changehero(){
