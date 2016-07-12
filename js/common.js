@@ -68,6 +68,9 @@
 	}
 
 	//Addlistener
+	$('.sroll_btn').click(function(){
+		$('body,html').animate({scrollTop:$('.pg2').offset().top-$('.break_top_bar').height()},500);
+	});
 	$('.logo').click(function(){
 		if(!o.wrp.hasClass('index')) window.location.href = 'index.html';
 	});

@@ -184,6 +184,7 @@
 						@include alb(40px,44px,50%,0,-20px);
 						background: url(../images/pg1_scroll.png) no-repeat;
 						background-position: center top;
+						cursor: pointer;
 						span{
 							content:"";
 							@include alb(20px,13px,50%,13px,-10px);
